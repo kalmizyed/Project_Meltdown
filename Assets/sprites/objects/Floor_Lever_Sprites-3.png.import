@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqjl3par80enw"
-path="res://.godot/imported/Crate_Sprite.png-f08673468e70f8ee6ee77f14c5eb76dc.ctex"
+uid="uid://bja35iqaciym6"
+path="res://.godot/imported/Floor_Lever_Sprites-3.png-be9d3b024f0e4ae56857b4331108a484.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/Crate_Sprite.png"
-dest_files=["res://.godot/imported/Crate_Sprite.png-f08673468e70f8ee6ee77f14c5eb76dc.ctex"]
+source_file="res://Assets/sprites/objects/Floor_Lever_Sprites-3.png"
+dest_files=["res://.godot/imported/Floor_Lever_Sprites-3.png-be9d3b024f0e4ae56857b4331108a484.ctex"]
 
 [params]
 

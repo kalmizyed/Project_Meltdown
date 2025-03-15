@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6a8thqmhqon5"
-path="res://.godot/imported/IJ-70_Inventory_Sprite.png-1577e83bd0c4ba4bc88e8fe655f9c742.ctex"
+uid="uid://nx4yk31jgq6h"
+path="res://.godot/imported/Key_Card_Beta_Inventory_Sprite.png-5b21eee7841c53a072b80c224dc02c6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/IJ-70_Inventory_Sprite.png"
-dest_files=["res://.godot/imported/IJ-70_Inventory_Sprite.png-1577e83bd0c4ba4bc88e8fe655f9c742.ctex"]
+source_file="res://Assets/sprites/objects/Key_Card_Beta_Inventory_Sprite.png"
+dest_files=["res://.godot/imported/Key_Card_Beta_Inventory_Sprite.png-5b21eee7841c53a072b80c224dc02c6a.ctex"]
 
 [params]
 

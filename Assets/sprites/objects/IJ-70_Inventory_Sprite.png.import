@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btnadyj85enc3"
-path="res://.godot/imported/Flashlight_Inventory_Beta_Sprite.png-c6fe331387cebbcca5d6d8d677e8b4f7.ctex"
+uid="uid://b6a8thqmhqon5"
+path="res://.godot/imported/IJ-70_Inventory_Sprite.png-b3e8eedad155161148d6de3d70277d41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/Flashlight_Inventory_Beta_Sprite.png"
-dest_files=["res://.godot/imported/Flashlight_Inventory_Beta_Sprite.png-c6fe331387cebbcca5d6d8d677e8b4f7.ctex"]
+source_file="res://Assets/sprites/objects/IJ-70_Inventory_Sprite.png"
+dest_files=["res://.godot/imported/IJ-70_Inventory_Sprite.png-b3e8eedad155161148d6de3d70277d41.ctex"]
 
 [params]
 

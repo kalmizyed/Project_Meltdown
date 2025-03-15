@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://edglpmtpo0px"
-path="res://.godot/imported/Barrel_Sprite.png-d9012c41e9ef3f574971040c079cd822.ctex"
+uid="uid://2ayewu33iydc"
+path="res://.godot/imported/Floor_Lever_Sprites-2.png-7d0ca39ed7286da5f8f117b60adcc4ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/Barrel_Sprite.png"
-dest_files=["res://.godot/imported/Barrel_Sprite.png-d9012c41e9ef3f574971040c079cd822.ctex"]
+source_file="res://Assets/sprites/objects/Floor_Lever_Sprites-2.png"
+dest_files=["res://.godot/imported/Floor_Lever_Sprites-2.png-7d0ca39ed7286da5f8f117b60adcc4ad.ctex"]
 
 [params]
 

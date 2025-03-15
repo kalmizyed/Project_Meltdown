@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sktr2hqu3erd"
-path="res://.godot/imported/Diary_Inventory_Sprite.png-b5cb8d5fafa9645b691531ff9715c866.ctex"
+uid="uid://djyj1hmdiwka7"
+path="res://.godot/imported/Floor_Lever_Sprites-1.png-fe6889767be6a9300ce07549b99df8ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/Diary_Inventory_Sprite.png"
-dest_files=["res://.godot/imported/Diary_Inventory_Sprite.png-b5cb8d5fafa9645b691531ff9715c866.ctex"]
+source_file="res://Assets/sprites/objects/Floor_Lever_Sprites-1.png"
+dest_files=["res://.godot/imported/Floor_Lever_Sprites-1.png-fe6889767be6a9300ce07549b99df8ca.ctex"]
 
 [params]
 

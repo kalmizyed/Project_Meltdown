@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bja35iqaciym6"
-path="res://.godot/imported/Floor_Lever_Sprites-3.png-047fd6b0c3cef2f765c82b283ea9a670.ctex"
+uid="uid://dgnb76qxiy61l"
+path="res://.godot/imported/Video_Tape_Inventory_Sprite.png-6632a2b8629af57b53faed7dcae2db79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/Floor_Lever_Sprites-3.png"
-dest_files=["res://.godot/imported/Floor_Lever_Sprites-3.png-047fd6b0c3cef2f765c82b283ea9a670.ctex"]
+source_file="res://Assets/sprites/objects/Video_Tape_Inventory_Sprite.png"
+dest_files=["res://.godot/imported/Video_Tape_Inventory_Sprite.png-6632a2b8629af57b53faed7dcae2db79.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djyj1hmdiwka7"
-path="res://.godot/imported/Floor_Lever_Sprites-1.png-dd02db42f407e10ba177f75b8c1331f5.ctex"
+uid="uid://bpodbbu1tydq0"
+path="res://.godot/imported/Boolets_Inventory_Sprite.png-43a846f6a4c420e33d56804a6a04588b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/Floor_Lever_Sprites-1.png"
-dest_files=["res://.godot/imported/Floor_Lever_Sprites-1.png-dd02db42f407e10ba177f75b8c1331f5.ctex"]
+source_file="res://Assets/sprites/objects/Boolets_Inventory_Sprite.png"
+dest_files=["res://.godot/imported/Boolets_Inventory_Sprite.png-43a846f6a4c420e33d56804a6a04588b.ctex"]
 
 [params]
 

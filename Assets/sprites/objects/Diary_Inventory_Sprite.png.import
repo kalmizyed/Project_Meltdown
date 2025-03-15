@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpodbbu1tydq0"
-path="res://.godot/imported/Boolets_Inventory_Sprite.png-0423c7992967d7e5121c31b62be0d5b5.ctex"
+uid="uid://sktr2hqu3erd"
+path="res://.godot/imported/Diary_Inventory_Sprite.png-ce1bb56e082fb9d33a6e43bc8a8da429.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/Boolets_Inventory_Sprite.png"
-dest_files=["res://.godot/imported/Boolets_Inventory_Sprite.png-0423c7992967d7e5121c31b62be0d5b5.ctex"]
+source_file="res://Assets/sprites/objects/Diary_Inventory_Sprite.png"
+dest_files=["res://.godot/imported/Diary_Inventory_Sprite.png-ce1bb56e082fb9d33a6e43bc8a8da429.ctex"]
 
 [params]
 

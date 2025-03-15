@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgnb76qxiy61l"
-path="res://.godot/imported/Video_Tape_Inventory_Sprite.png-f427aec51ccec1139ef7c5e271b14bf5.ctex"
+uid="uid://edglpmtpo0px"
+path="res://.godot/imported/Barrel_Sprite.png-f73b205729fce859bb3ab69d6ec19690.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Object Sprites/Video_Tape_Inventory_Sprite.png"
-dest_files=["res://.godot/imported/Video_Tape_Inventory_Sprite.png-f427aec51ccec1139ef7c5e271b14bf5.ctex"]
+source_file="res://Assets/sprites/objects/Barrel_Sprite.png"
+dest_files=["res://.godot/imported/Barrel_Sprite.png-f73b205729fce859bb3ab69d6ec19690.ctex"]
 
 [params]
 
