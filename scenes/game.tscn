@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://b6k6vcqoom6ro"]
+[gd_scene load_steps=4 format=3 uid="uid://b6k6vcqoom6ro"]
+
+[ext_resource type="Texture2D" uid="uid://6osglomaqj8e" path="res://Assets/sprites/wall_placeholder.jpg" id="1_rlysi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udmik"]
+texture = ExtResource("1_rlysi")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_v2mq8"]
+sources/2 = SubResource("TileSetAtlasSource_udmik")
 
 [node name="Game" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_v2mq8")
