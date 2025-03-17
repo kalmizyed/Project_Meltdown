@@ -9,9 +9,8 @@ signal container_opened(container: ContainerInteractable)
 func _ready() -> void:
 	container_opened.connect(_on_container_opened)
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") and hitbox and hitbox.has_overlapping_bodies():
-		container_opened.emit(self)
+func _interact() -> void:
+	container_opened.emit(self)
 
 func addItem(item: Node2D):
 	items.append(item)
