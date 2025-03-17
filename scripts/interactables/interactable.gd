@@ -1,6 +1,5 @@
 class_name Interactable
 extends Node
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+## The Area2D players have to be within to interact with this node.
+@export var hitbox: Area2D
