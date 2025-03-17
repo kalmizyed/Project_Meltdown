@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://d33iws2i65j2b"]
+
+[ext_resource type="Texture2D" uid="uid://djyj1hmdiwka7" path="res://assets/sprites/objects/Floor_Lever_Sprites-1.png" id="1_tydo7"]
+[ext_resource type="Script" path="res://scripts/objects/placeholder/lever.gd" id="1_ujo6i"]
+[ext_resource type="Texture2D" uid="uid://2ayewu33iydc" path="res://assets/sprites/objects/Floor_Lever_Sprites-2.png" id="2_6r6mm"]
+[ext_resource type="Texture2D" uid="uid://bja35iqaciym6" path="res://assets/sprites/objects/Floor_Lever_Sprites-3.png" id="3_bs0a4"]
+[ext_resource type="Script" path="res://scripts/interactables/switch_interactable.gd" id="4_xgjqx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p0orw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tydo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6r6mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bs0a4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iok6u"]
+size = Vector2(12, 7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_418r4"]
+radius = 10.0499
+
+[node name="Lever" type="StaticBody2D"]
+script = ExtResource("1_ujo6i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.02, 0.02)
+sprite_frames = SubResource("SpriteFrames_p0orw")
+speed_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_iok6u")
+
+[node name="SwitchInteractable" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("4_xgjqx")
+flag = "Lever"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchInteractable"]
+shape = SubResource("CircleShape2D_418r4")
+
+[connection signal="switch_flipped" from="SwitchInteractable" to="." method="_on_switch_interactable_switch_flipped"]
