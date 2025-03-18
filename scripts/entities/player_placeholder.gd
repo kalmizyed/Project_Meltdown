@@ -14,3 +14,4 @@ func _physics_process(delta: float) -> void:
 	velocity.y = direction['y'] * SPEED if direction['y'] else move_toward(velocity.y, 0, SPEED)
 
 	move_and_slide()
+	AudioController.play_footsteps() # This might just play constantly idk

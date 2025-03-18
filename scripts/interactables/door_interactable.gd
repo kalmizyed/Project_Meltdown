@@ -5,4 +5,5 @@ extends Interactable
 @export var destination: String
 
 func _interact() -> void:
+	AudioController.play_door()
 	print('Door opened!  This would switch the scene to the one located at ' + destination + '.')
