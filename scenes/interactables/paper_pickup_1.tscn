@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://btnm2oe5kt8sp"]
+
+[ext_resource type="Script" path="res://scripts/interactables/text_interactable.gd" id="1_cpcnh"]
+[ext_resource type="Texture2D" uid="uid://c3aq8d2fssa4k" path="res://assets/sprites/objects/Paper_Pile_Sprite.png" id="2_ckm01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5i5jl"]
+size = Vector2(26, 24)
+
+[node name="PaperPickup1" type="Area2D"]
+script = ExtResource("1_cpcnh")
+
+[node name="PaperPileSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 1.90735e-06)
+scale = Vector2(0.0711111, 0.0727273)
+texture = ExtResource("2_ckm01")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 4)
+shape = SubResource("RectangleShape2D_5i5jl")
