@@ -109,38 +109,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4imj2"]
 size = Vector2(125, 384)
 
-[sub_resource type="Animation" id="Animation_sud1l"]
-resource_name = "Idle_left"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.000793215, 1),
-"update": 1,
-"values": [2, 2]
-}
-
-[sub_resource type="Animation" id="Animation_5w0li"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-
-[sub_resource type="Animation" id="Animation_4w8uh"]
-resource_name = "Idle_front"
+[sub_resource type="Animation" id="Animation_iq874"]
+resource_name = "Grab_back"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -151,52 +121,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 0]
-}
-
-[sub_resource type="Animation" id="Animation_uet1o"]
-resource_name = "Idle_back"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 1]
-}
-
-[sub_resource type="Animation" id="Animation_d4gb7"]
-resource_name = "Idle_right"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [3, 3]
-}
-
-[sub_resource type="Animation" id="Animation_cdapt"]
-resource_name = "Grab_left"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [6, 6]
+"values": [5, 5]
 }
 
 [sub_resource type="Animation" id="Animation_5ybh3"]
@@ -214,6 +139,21 @@ tracks/0/keys = {
 "values": [4, 4]
 }
 
+[sub_resource type="Animation" id="Animation_cdapt"]
+resource_name = "Grab_left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 6]
+}
+
 [sub_resource type="Animation" id="Animation_xy0hs"]
 resource_name = "Grab_right"
 tracks/0/type = "value"
@@ -229,8 +169,8 @@ tracks/0/keys = {
 "values": [7, 7]
 }
 
-[sub_resource type="Animation" id="Animation_iq874"]
-resource_name = "Grab_back"
+[sub_resource type="Animation" id="Animation_jpkx4"]
+resource_name = "HolyFuckingShitHIDEHIDEHIDEHIDEHIDE"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -241,11 +181,11 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [12, 12]
 }
 
-[sub_resource type="Animation" id="Animation_bi026"]
-resource_name = "push_Left"
+[sub_resource type="Animation" id="Animation_uet1o"]
+resource_name = "Idle_back"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -256,11 +196,11 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [10, 10]
+"values": [1, 1]
 }
 
-[sub_resource type="Animation" id="Animation_w058v"]
-resource_name = "push_Front"
+[sub_resource type="Animation" id="Animation_4w8uh"]
+resource_name = "Idle_front"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -271,11 +211,26 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [8, 8]
+"values": [0, 0]
 }
 
-[sub_resource type="Animation" id="Animation_hqowp"]
-resource_name = "push_Right"
+[sub_resource type="Animation" id="Animation_sud1l"]
+resource_name = "Idle_left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.000793215, 1),
+"update": 1,
+"values": [2, 2]
+}
+
+[sub_resource type="Animation" id="Animation_d4gb7"]
+resource_name = "Idle_right"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -286,7 +241,22 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [11, 11]
+"values": [3, 3]
+}
+
+[sub_resource type="Animation" id="Animation_5w0li"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
 }
 
 [sub_resource type="Animation" id="Animation_l48ts"]
@@ -304,8 +274,8 @@ tracks/0/keys = {
 "values": [9, 9]
 }
 
-[sub_resource type="Animation" id="Animation_jpkx4"]
-resource_name = "HolyFuckingShitHIDEHIDEHIDEHIDEHIDE"
+[sub_resource type="Animation" id="Animation_w058v"]
+resource_name = "push_Front"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -316,7 +286,37 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [12, 12]
+"values": [8, 8]
+}
+
+[sub_resource type="Animation" id="Animation_bi026"]
+resource_name = "push_Left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [10, 10]
+}
+
+[sub_resource type="Animation" id="Animation_hqowp"]
+resource_name = "push_Right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [11, 11]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c7g56"]
