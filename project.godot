@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Codename_Meltdown"
-run/main_scene="res://Scenes/game.tscn"
+run/main_scene="res://scenes/title_screen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioController="*res://scenes/audio_controller.tscn"
 
 [input]
 
