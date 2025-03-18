@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cboto5jyhpsgq"
-path="res://.godot/imported/footsteps_with_reverb.mp3-51c8713d6826f65ce37c5218c11e387b.mp3str"
+path="res://.godot/imported/footsteps_with_reverb.mp3-622dacac2c14f00d71c17d66ad2cc7eb.mp3str"
 
 [deps]
 
-source_file="res://Assets/sfx/footsteps_with_reverb.mp3"
-dest_files=["res://.godot/imported/footsteps_with_reverb.mp3-51c8713d6826f65ce37c5218c11e387b.mp3str"]
+source_file="res://assets/sfx/footsteps_with_reverb.mp3"
+dest_files=["res://.godot/imported/footsteps_with_reverb.mp3-622dacac2c14f00d71c17d66ad2cc7eb.mp3str"]
 
 [params]
 

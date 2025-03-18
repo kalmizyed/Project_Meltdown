@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://chbjgi0adi35r"
-path="res://.godot/imported/electronic_door.mp3-d5cb3f95bc34a6bae7a73102d4d7eacb.mp3str"
+path="res://.godot/imported/electronic_door.mp3-860cebbec95a89caf5fb022d39570212.mp3str"
 
 [deps]
 
-source_file="res://Assets/sfx/electronic_door.mp3"
-dest_files=["res://.godot/imported/electronic_door.mp3-d5cb3f95bc34a6bae7a73102d4d7eacb.mp3str"]
+source_file="res://assets/sfx/electronic_door.mp3"
+dest_files=["res://.godot/imported/electronic_door.mp3-860cebbec95a89caf5fb022d39570212.mp3str"]
 
 [params]
 
