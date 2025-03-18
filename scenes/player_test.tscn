@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5vnoodeqqp16"]
+[gd_scene load_steps=3 format=3 uid="uid://c5vnoodeqqp16"]
 
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://Player/player.tscn" id="1_qujb4"]
+[ext_resource type="PackedScene" uid="uid://invds518p6yv" path="res://EmergencyLight.tscn" id="2_y0nju"]
 
 [node name="PlayerTest" type="Node2D"]
 
@@ -8,3 +9,17 @@
 
 [node name="player" parent="." instance=ExtResource("1_qujb4")]
 scale = Vector2(0.25, 0.25)
+
+[node name="EmergencyLight" parent="." instance=ExtResource("2_y0nju")]
+position = Vector2(-204, 1)
+scale = Vector2(0.2, 0.2)
+
+[node name="EmergencyLight2" parent="." instance=ExtResource("2_y0nju")]
+position = Vector2(-204, -76)
+scale = Vector2(0.2, 0.2)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
+position = Vector2(-152, 35)
+color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+energy = 16.0
