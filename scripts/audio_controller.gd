@@ -1,4 +1,4 @@
-extends AudioStreamPlayer
+extends Node2D
 
 @export var mute: bool = false
 
@@ -24,6 +24,10 @@ func play_footsteps() -> void:
 	# look in player_placeholder.gd
 	if not mute:
 		$Footsteps.play()
+
+func play_footsteps_with_reverb() -> void:
+	if not mute:
+		$FootstepsReverb.play()
 
 func play_bag_open() -> void:
 	if not mute:
