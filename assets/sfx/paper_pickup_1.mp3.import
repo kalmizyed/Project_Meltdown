@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://enp6go84803"
-path="res://.godot/imported/paper_pickup_1.mp3-60998340b236de0cd85444b4c82a25ef.mp3str"
+path="res://.godot/imported/paper_pickup_1.mp3-9d3ee429cac6ecdabfc496f256531db3.mp3str"
 
 [deps]
 
-source_file="res://Assets/sfx/paper_pickup_1.mp3"
-dest_files=["res://.godot/imported/paper_pickup_1.mp3-60998340b236de0cd85444b4c82a25ef.mp3str"]
+source_file="res://assets/sfx/paper_pickup_1.mp3"
+dest_files=["res://.godot/imported/paper_pickup_1.mp3-9d3ee429cac6ecdabfc496f256531db3.mp3str"]
 
 [params]
 

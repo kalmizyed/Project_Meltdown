@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nx4yk31jgq6h"
-path="res://.godot/imported/Key_Card_Beta_Inventory_Sprite.png-5b21eee7841c53a072b80c224dc02c6a.ctex"
+path="res://.godot/imported/Key_Card_Beta_Inventory_Sprite.png-22d099bc0d5bad1604f7d0e7e277d3da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/objects/Key_Card_Beta_Inventory_Sprite.png"
-dest_files=["res://.godot/imported/Key_Card_Beta_Inventory_Sprite.png-5b21eee7841c53a072b80c224dc02c6a.ctex"]
+source_file="res://assets/sprites/objects/Key_Card_Beta_Inventory_Sprite.png"
+dest_files=["res://.godot/imported/Key_Card_Beta_Inventory_Sprite.png-22d099bc0d5bad1604f7d0e7e277d3da.ctex"]
 
 [params]
 

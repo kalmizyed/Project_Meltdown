@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2ayewu33iydc"
-path="res://.godot/imported/Floor_Lever_Sprites-2.png-7d0ca39ed7286da5f8f117b60adcc4ad.ctex"
+path="res://.godot/imported/Floor_Lever_Sprites-2.png-217e94d6282481aa93d8354c6fdf0b9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/objects/Floor_Lever_Sprites-2.png"
-dest_files=["res://.godot/imported/Floor_Lever_Sprites-2.png-7d0ca39ed7286da5f8f117b60adcc4ad.ctex"]
+source_file="res://assets/sprites/objects/Floor_Lever_Sprites-2.png"
+dest_files=["res://.godot/imported/Floor_Lever_Sprites-2.png-217e94d6282481aa93d8354c6fdf0b9c.ctex"]
 
 [params]
 

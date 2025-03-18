@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3aq8d2fssa4k"
-path="res://.godot/imported/Paper_Pile_Sprite.png-334241d87a1ee31b54bcd75c21e5ea29.ctex"
+path="res://.godot/imported/Paper_Pile_Sprite.png-93e5e511c27c1447574ded40414d9522.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/objects/Paper_Pile_Sprite.png"
-dest_files=["res://.godot/imported/Paper_Pile_Sprite.png-334241d87a1ee31b54bcd75c21e5ea29.ctex"]
+source_file="res://assets/sprites/objects/Paper_Pile_Sprite.png"
+dest_files=["res://.godot/imported/Paper_Pile_Sprite.png-93e5e511c27c1447574ded40414d9522.ctex"]
 
 [params]
 
