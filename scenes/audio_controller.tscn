@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bp5ym4qoolg1c"]
+[gd_scene load_steps=9 format=3 uid="uid://bp5ym4qoolg1c"]
 
 [ext_resource type="Script" path="res://scripts/audio_controller.gd" id="1_031uf"]
 [ext_resource type="AudioStream" uid="uid://chbjgi0adi35r" path="res://assets/sfx/electronic_door.mp3" id="1_bxl2e"]
 [ext_resource type="AudioStream" uid="uid://ceie8p81fvv0m" path="res://assets/sfx/paper_pickup_2.mp3" id="2_013m7"]
+[ext_resource type="AudioStream" uid="uid://chkpw76nk2oq8" path="res://assets/music/main.mp3" id="2_bqb4c"]
 [ext_resource type="AudioStream" uid="uid://dpe7qc2tlupsr" path="res://assets/sfx/footsteps.mp3" id="4_mw56g"]
 [ext_resource type="AudioStream" uid="uid://cboto5jyhpsgq" path="res://assets/sfx/footsteps_with_reverb.mp3" id="5_csmma"]
 [ext_resource type="AudioStream" uid="uid://ccbcycbq76cxx" path="res://assets/sfx/bag_open.mp3" id="5_pm0us"]
@@ -12,6 +13,7 @@
 script = ExtResource("1_031uf")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bqb4c")
 
 [node name="Door" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_bxl2e")
