@@ -22,6 +22,9 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("Grab"):
 		print("Ohh Shiny dis shi is mine")
+		
+	if Input.is_action_just_pressed("Flashlight"):
+		print("The power of the sun the the palm of my hand")
 
 
 	# Get the input direction and handle the movement/deceleration.
