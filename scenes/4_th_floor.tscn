@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://b6k6vcqoom6ro"]
+[gd_scene load_steps=14 format=4 uid="uid://b6k6vcqoom6ro"]
 
 [ext_resource type="Texture2D" uid="uid://6osglomaqj8e" path="res://assets/sprites/wall_placeholder.jpg" id="1_rlysi"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/game_ui.tscn" id="2_hc5d5"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/grey_sprite.png" id="4_hpp78"]
 [ext_resource type="PackedScene" uid="uid://bx1hc1l0260tg" path="res://scenes/interactables/placeholder/diary.tscn" id="5_6a3lc"]
 [ext_resource type="PackedScene" uid="uid://b6pdbihab0037" path="res://scenes/interactables/placeholder/door.tscn" id="6_8vpbc"]
+[ext_resource type="PackedScene" uid="uid://ctdg1jkk0tb0r" path="res://scenes/interactables/placeholder/flashlight.tscn" id="8_ilyv6"]
+[ext_resource type="PackedScene" uid="uid://d33iws2i65j2b" path="res://scenes/interactables/placeholder/lever.tscn" id="9_l0j8o"]
+[ext_resource type="PackedScene" uid="uid://cajgf3fg835e5" path="res://scenes/interactables/placeholder/barrel_hazard.tscn" id="10_2h0yi"]
+[ext_resource type="PackedScene" uid="uid://duot6ct56imwc" path="res://scenes/interactables/placeholder/crate.tscn" id="11_vfyti"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udmik"]
 texture = ExtResource("1_rlysi")
@@ -34,6 +38,18 @@ position = Vector2(528, -40)
 
 [node name="Door" parent="." instance=ExtResource("6_8vpbc")]
 position = Vector2(32, -256)
+
+[node name="Flashlight" parent="." instance=ExtResource("8_ilyv6")]
+position = Vector2(331, -224)
+
+[node name="Lever" parent="." instance=ExtResource("9_l0j8o")]
+position = Vector2(151, -171)
+
+[node name="BarrelHazard" parent="." instance=ExtResource("10_2h0yi")]
+position = Vector2(351, 178)
+
+[node name="Crate" parent="." instance=ExtResource("11_vfyti")]
+position = Vector2(-145, 319)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_yijqu")]
 position = Vector2(32, 72)
