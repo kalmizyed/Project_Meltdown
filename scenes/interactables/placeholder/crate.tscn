@@ -32,10 +32,13 @@ shape = SubResource("RectangleShape2D_kdwd1")
 [node name="PlaceholderItems" type="Node" parent="."]
 
 [node name="Boolets" type="Sprite2D" parent="PlaceholderItems"]
+visible = false
 texture = ExtResource("3_4gv3j")
 
 [node name="Boolets2" type="Sprite2D" parent="PlaceholderItems"]
+visible = false
 texture = ExtResource("3_4gv3j")
 
 [node name="Boolets3" type="Sprite2D" parent="PlaceholderItems"]
+visible = false
 texture = ExtResource("3_4gv3j")
