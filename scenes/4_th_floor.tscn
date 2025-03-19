@@ -25,7 +25,6 @@ tile_set = SubResource("TileSet_v2mq8")
 
 [node name="Diary" parent="." instance=ExtResource("5_6a3lc")]
 position = Vector2(-408, -48)
-collision_layer = 2
 
 [node name="Diary2" parent="." instance=ExtResource("5_6a3lc")]
 position = Vector2(176, 368)
