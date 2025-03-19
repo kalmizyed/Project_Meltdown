@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var main_2d : Node2D = $Main2D
-@onready var camera : Camera2D = $Main2D/Camera
+@onready var camera : Camera2D = $Main2D/Camera2D
 @onready var exit_button = $X
 var level_instance : Node2D
 # Called when the node enters the scene tree for the first time.
@@ -28,11 +28,6 @@ func add_level(level_name : String):
 	if(level_resource):
 		level_instance = level_resource.instantiate()
 		main_2d.add_child(level_instance)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 
 func _on_exit_pressed() -> void:
 	load_level("title_screen") # Replace with function body.

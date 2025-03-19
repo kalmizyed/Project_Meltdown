@@ -20,9 +20,6 @@ func load_level(level_name : String):
 	var level_resource := load(level_path)
 	if(level_resource):
 		get_tree().change_scene_to_file(level_path)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_return_pressed() -> void:
