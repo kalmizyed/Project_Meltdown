@@ -28,7 +28,7 @@ func play_footsteps() -> void:
 
 func play_footsteps_with_reverb() -> void:
 	if not mute:
-		$FootstepsReverb.pitch_scale = randf_range(0.7, 1)
+		$FootstepsReverb.pitch_scale = randf_range(0.7, 1) # This range can be tweaked
 		$FootstepsReverb.play()
 
 func play_bag_open() -> void:
