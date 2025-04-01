@@ -1,9 +1,10 @@
 extends Node2D
 
 @export var mute: bool = false
+@export var mute_music: bool = false
 
 func _ready():
-	if not mute:
+	if not mute_music:
 		play_music()
 
 func play_music():
@@ -27,6 +28,7 @@ func play_footsteps() -> void:
 
 func play_footsteps_with_reverb() -> void:
 	if not mute:
+		$FootstepsReverb.pitch_scale = randf_range(0.7, 1)
 		$FootstepsReverb.play()
 
 func play_bag_open() -> void:

@@ -5,12 +5,13 @@
 [ext_resource type="AudioStream" uid="uid://ceie8p81fvv0m" path="res://assets/sfx/paper_pickup_2.mp3" id="2_013m7"]
 [ext_resource type="AudioStream" uid="uid://chkpw76nk2oq8" path="res://assets/music/main.mp3" id="2_bqb4c"]
 [ext_resource type="AudioStream" uid="uid://dpe7qc2tlupsr" path="res://assets/sfx/footsteps.mp3" id="4_mw56g"]
-[ext_resource type="AudioStream" uid="uid://cboto5jyhpsgq" path="res://assets/sfx/footsteps_with_reverb.mp3" id="5_csmma"]
 [ext_resource type="AudioStream" uid="uid://ccbcycbq76cxx" path="res://assets/sfx/bag_open.mp3" id="5_pm0us"]
 [ext_resource type="AudioStream" uid="uid://hgjqjmasngoh" path="res://assets/sfx/book_pickup.mp3" id="6_2amb3"]
+[ext_resource type="AudioStream" uid="uid://c6o4xnm03021h" path="res://assets/sfx/footstep_with_reverb.mp3" id="6_2jvyk"]
 
 [node name="AudioController" type="Node2D"]
 script = ExtResource("1_031uf")
+mute_music = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_bqb4c")
@@ -32,7 +33,7 @@ stream = ExtResource("4_mw56g")
 volume_db = 7.0
 
 [node name="FootstepsReverb" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_csmma")
+stream = ExtResource("6_2jvyk")
 volume_db = 7.0
 
 [node name="Bag" type="AudioStreamPlayer" parent="."]

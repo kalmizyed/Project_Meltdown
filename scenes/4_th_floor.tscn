@@ -61,3 +61,7 @@ texture = ExtResource("4_hpp78")
 
 [node name="GameUI" parent="CharacterBody2D" instance=ExtResource("2_hc5d5")]
 position = Vector2(-576, -328)
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+unique_name_in_owner = true
+one_shot = true

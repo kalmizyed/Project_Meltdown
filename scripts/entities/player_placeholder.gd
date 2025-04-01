@@ -13,6 +13,9 @@ func _physics_process(_delta: float) -> void:
 	velocity.x = direction['x'] * SPEED if direction['x'] else move_toward(velocity.x, 0, SPEED)
 	velocity.y = direction['y'] * SPEED if direction['y'] else move_toward(velocity.y, 0, SPEED)
 	
-	if(velocity.x!=0 || velocity.y!=0):
-		AudioController.play_footsteps_with_reverb() # This might just play constantly idk
+	if(velocity.length()!=0):
+		if(%Timer.time_left<=0):
+			AudioController.play_footsteps_with_reverb()
+			$Timer.start(0.75)
+	
 	move_and_slide()
