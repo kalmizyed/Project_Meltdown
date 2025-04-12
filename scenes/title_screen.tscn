@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6k6vcqoom6ro"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_07vnt"]
-[ext_resource type="Texture2D" uid="uid://cndkolyq5t1cc" path="res://assets/sprites/UI/titlescreen_placeholder.bmp" id="2_0kw7p"]
+[ext_resource type="Texture2D" uid="uid://bf372vp82vdo1" path="res://assets/sprites/UI/titlescreen.bmp" id="2_rxh02"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_07vnt")
@@ -9,7 +9,7 @@ script = ExtResource("1_07vnt")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-3, 4)
 scale = Vector2(0.609896, 0.600463)
-texture = ExtResource("2_0kw7p")
+texture = ExtResource("2_rxh02")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -45,10 +45,10 @@ offset_bottom = 42.0
 
 [node name="Start" type="Button" parent="Title"]
 layout_mode = 0
-offset_left = -26.0
-offset_top = 183.0
-offset_right = 20.0
-offset_bottom = 214.0
+offset_left = -446.0
+offset_top = -10.0
+offset_right = -244.0
+offset_bottom = 53.0
 text = "Start"
 
 [node name="Main2D" type="Node2D" parent="."]
