@@ -7,6 +7,8 @@ var level_instance : Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	exit_button.visible = false # Replace with function body.
+	camera.zoom = Vector2(3, 2.7)
+	camera.position.y += 20
 	
 func unload_level():
 	if (is_instance_valid(level_instance)):

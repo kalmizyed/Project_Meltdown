@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 AudioController="*res://scenes/audio_controller.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 interact={
