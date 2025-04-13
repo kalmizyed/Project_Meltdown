@@ -1,0 +1,91 @@
+[33mcommit 509c52633a2a4fc68da4897605da3e2fb9fac78c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32maddingPlayer[m[33m, [m[1;31morigin/addingPlayer[m[33m)[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Tue Mar 18 11:18:05 2025 -0500
+
+    Commit solely for moving to main branch
+
+[33mcommit e8ef824b5800f007c4fc991ca079eb9cfd332eca[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Tue Mar 18 10:24:55 2025 -0500
+
+    Added console message for flashlight, and removed everything from the game scene for better merging
+
+[33mcommit d45ab8b88235b5fc59f67cb314800329ca5bfe64[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Tue Mar 18 10:20:38 2025 -0500
+
+    Added some light stuf + light around player
+
+[33mcommit 30b18c71237ee16307d0a86279e1e3837a194956[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Tue Mar 18 09:48:17 2025 -0500
+
+    Implemented Player Placeholder Animations
+
+[33mcommit d283cb64544abce0810347de6fcc1cedfe67c12b[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Tue Mar 18 01:47:42 2025 -0500
+
+    Trying to reimplement player sprite animaiton, will finish early tomarrow
+
+[33mcommit 8378a5a73831594fcef8543a1a6c5ee6ef276ba5[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Sun Mar 16 23:01:41 2025 -0500
+
+    Started Player Scene, Added some Player Control Mapping, and edited SpriteSheet
+
+[33mcommit 83eac133b64a0fab787ba6b7e7f160fc13c53513[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Sun Mar 16 22:25:14 2025 -0500
+
+    Edited Placeholder Player Sprites to be more evenly spaced
+
+[33mcommit 95978643243956c1862e85af6969691262d6ce75[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Sun Mar 16 22:20:59 2025 -0500
+
+    Added Character Placeholder Sprite Sheet
+
+[33mcommit af4634150d10c23caf8d0e5198c636a391c7e609[m[33m ([m[1;31morigin/tilemap[m[33m)[m
+Author: em9500 <emerson.chism@gmail.com>
+Date:   Sun Mar 16 12:54:15 2025 -0500
+
+    Added SFX
+    
+    Created folder for sfx in assets folder and added 7 sound effects
+
+[33mcommit 58e65e26fe3a8932ee7c41cbf6479543a61f6a0a[m
+Author: kalmizyed <kalmizyed@wisc.edu>
+Date:   Sat Mar 15 18:12:49 2025 -0500
+
+    Rename assets folder
+
+[33mcommit 7f88f4830b7f6382132c4a2b6765ac0832395030[m
+Author: kalmizyed <kalmizyed@wisc.edu>
+Date:   Sat Mar 15 18:11:37 2025 -0500
+
+    Add root node to game
+
+[33mcommit 3a79a106eb9a8763a7283d7496d19e2296a626da[m
+Author: TrueLizardmaster <154645238+TrueLizardmaster@users.noreply.github.com>
+Date:   Fri Mar 7 18:49:24 2025 -0600
+
+    Added Some Object Sprites
+
+[33mcommit c467a68682b9ac7cb8047f6da639b69358c2ca0b[m
+Author: Kaden Almizyed <kalmizyed@wisc.edu>
+Date:   Wed Feb 26 14:30:10 2025 -0600
+
+    Update README with setup and contribution info
+
+[33mcommit c4d80fdcf9015eb471e70670ccd9ef4cd05e700c[m
+Author: Kaden Almizyed <114317553+kalmizyed@users.noreply.github.com>
+Date:   Tue Feb 25 13:27:23 2025 -0600
+
+    Create README.md
+
+[33mcommit 3a9cc0fc6ae2e4c7100cc54b9ee5afd7d6e49a53[m
+Author: kalmizyed <kalmizyed@wisc.edu>
+Date:   Tue Feb 25 13:17:48 2025 -0600
+
+    Set up Godot project

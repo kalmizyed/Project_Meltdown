@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd3o6crtepqf1"]
+
+[ext_resource type="Texture2D" uid="uid://buipoaklrluu3" path="res://assets/lightEffects/Light_effect.png" id="1_lw5wi"]
+
+[node name="Overworld_Flashlight" type="Node2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 1.58
+texture = ExtResource("1_lw5wi")
+texture_scale = 0.01

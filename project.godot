@@ -15,6 +15,20 @@ run/main_scene="res://Scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+[autoload]
+
+AudioController="*res://scenes/audio_controller.tscn"
+
+[display]
+
+window/stretch/mode="viewport"
+
+>>>>>>> 565268fb864d6a4e9a878c1d187e4c9ae51b757f
+>>>>>>> Stashed changes
 [input]
 
 Left={

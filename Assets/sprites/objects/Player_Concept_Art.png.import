@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/sprites/objects/Player_Concept_Art.png.import
 uid="uid://cnhxhgyalae7"
 path="res://.godot/imported/Player_Concept_Art.png-d4510af58a61b711ee14bf3533c16127.ctex"
+=======
+uid="uid://cndkolyq5t1cc"
+path="res://.godot/imported/titlescreen_placeholder.bmp-28b729ba79647ec4a32bb96e10f5c125.ctex"
+>>>>>>> Stashed changes:assets/sprites/UI/titlescreen_placeholder.bmp.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/sprites/objects/Player_Concept_Art.png.import
 source_file="res://Assets/sprites/objects/Player_Concept_Art.png"
 dest_files=["res://.godot/imported/Player_Concept_Art.png-d4510af58a61b711ee14bf3533c16127.ctex"]
+=======
+source_file="res://assets/sprites/UI/titlescreen_placeholder.bmp"
+dest_files=["res://.godot/imported/titlescreen_placeholder.bmp-28b729ba79647ec4a32bb96e10f5c125.ctex"]
+>>>>>>> Stashed changes:assets/sprites/UI/titlescreen_placeholder.bmp.import
 
 [params]
 

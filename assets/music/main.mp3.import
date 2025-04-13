@@ -1,0 +1,27 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+<<<<<<< HEAD
+uid="uid://deola3rrwopcx"
+=======
+uid="uid://chkpw76nk2oq8"
+>>>>>>> 565268fb864d6a4e9a878c1d187e4c9ae51b757f
+path="res://.godot/imported/main.mp3-12783787adb6ab460223e3d0067c429e.mp3str"
+
+[deps]
+
+source_file="res://assets/music/main.mp3"
+dest_files=["res://.godot/imported/main.mp3-12783787adb6ab460223e3d0067c429e.mp3str"]
+
+[params]
+
+<<<<<<< HEAD
+loop=false
+=======
+loop=true
+>>>>>>> 565268fb864d6a4e9a878c1d187e4c9ae51b757f
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

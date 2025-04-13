@@ -1,7 +1,15 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://c5vnoodeqqp16"]
 
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://Player/player.tscn" id="1_qujb4"]
 [ext_resource type="PackedScene" uid="uid://invds518p6yv" path="res://EmergencyLight.tscn" id="2_y0nju"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://c88s5fltgtsmt"]
+
+[ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://Player/player.tscn" id="1_qujb4"]
+[ext_resource type="PackedScene" uid="uid://1kj01bmv1h8j" path="res://EmergencyLight.tscn" id="2_y0nju"]
+[ext_resource type="PackedScene" uid="uid://kmdpk3r1ei8m" path="res://Enemy/monster.tscn" id="3_b4ool"]
+>>>>>>> Stashed changes
 
 [node name="PlayerTest" type="Node2D"]
 
@@ -18,6 +26,13 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(-204, -76)
 scale = Vector2(0.2, 0.2)
 
+<<<<<<< Updated upstream
+=======
+[node name="Monster" parent="." instance=ExtResource("3_b4ool")]
+position = Vector2(-384, 32)
+scale = Vector2(0.4, 0.4)
+
+>>>>>>> Stashed changes
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 visible = false
 position = Vector2(-152, 35)

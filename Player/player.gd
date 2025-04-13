@@ -34,7 +34,11 @@ func _physics_process(delta):
 	elif Input.is_action_just_pressed("Up") || Input.is_action_just_pressed("Down"):
 		direction.x=0
 	##else:
+<<<<<<< Updated upstream
 	##	direction = Vector2.ZERO
+=======
+		##direction = Vector2.ZERO
+>>>>>>> Stashed changes
 
 	velocity = direction * SPEED
 	move_and_slide()
