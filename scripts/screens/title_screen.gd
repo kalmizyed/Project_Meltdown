@@ -23,12 +23,12 @@ func load_level(level_name : String):
 
 
 func _on_return_pressed() -> void:
-	load_level("4_th_floor") # Replace with function body.
+	load_level("Emerson_left_wing") # Replace with function body.
 
 
 func _on_inventory_pressed() -> void:
-	load_level("4_th_floor") # Replace with function body.
+	load_level("Emerson_left_wing") # Replace with function body.
 
 
 func _on_start_pressed() -> void:
-	load_level("4_th_floor") # Replace with function body.
+	load_level("Emerson_left_wing") # Replace with function body.

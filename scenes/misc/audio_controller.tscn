@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://bp5ym4qoolg1c"]
 
 [ext_resource type="Script" path="res://scripts/audio_controller.gd" id="1_031uf"]
-[ext_resource type="AudioStream" uid="uid://chbjgi0adi35r" path="res://assets/sfx/electronic_door.mp3" id="1_bxl2e"]
-[ext_resource type="AudioStream" uid="uid://ceie8p81fvv0m" path="res://assets/sfx/paper_pickup_2.mp3" id="2_013m7"]
+[ext_resource type="AudioStream" uid="uid://cupwmicl8ccmq" path="res://assets/sfx/electronic_door.mp3" id="1_bxl2e"]
+[ext_resource type="AudioStream" uid="uid://cl8gbpdjhg5px" path="res://assets/sfx/paper_pickup_2.mp3" id="2_013m7"]
 [ext_resource type="AudioStream" uid="uid://chkpw76nk2oq8" path="res://assets/music/main.mp3" id="2_bqb4c"]
-[ext_resource type="AudioStream" uid="uid://dpe7qc2tlupsr" path="res://assets/sfx/footsteps.mp3" id="4_mw56g"]
-[ext_resource type="AudioStream" uid="uid://ccbcycbq76cxx" path="res://assets/sfx/bag_open.mp3" id="5_pm0us"]
-[ext_resource type="AudioStream" uid="uid://hgjqjmasngoh" path="res://assets/sfx/book_pickup.mp3" id="6_2amb3"]
-[ext_resource type="AudioStream" uid="uid://c6o4xnm03021h" path="res://assets/sfx/footstep_with_reverb.mp3" id="6_2jvyk"]
+[ext_resource type="AudioStream" uid="uid://b0f6sro1q0p8r" path="res://assets/sfx/footsteps.mp3" id="4_mw56g"]
+[ext_resource type="AudioStream" uid="uid://bbwswywxiha1w" path="res://assets/sfx/bag_open.mp3" id="5_pm0us"]
+[ext_resource type="AudioStream" uid="uid://dnarv5lunejf2" path="res://assets/sfx/book_pickup.mp3" id="6_2amb3"]
+[ext_resource type="AudioStream" uid="uid://cno2jsqurmixb" path="res://assets/sfx/footstep_with_reverb.mp3" id="6_2jvyk"]
 
 [node name="AudioController" type="Node2D"]
 script = ExtResource("1_031uf")
