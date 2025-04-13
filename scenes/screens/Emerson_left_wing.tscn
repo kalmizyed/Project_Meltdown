@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://dcfv5io1xfwva"]
+[gd_scene load_steps=5 format=4 uid="uid://dcfv5io1xfwva"]
 
 [ext_resource type="Texture2D" uid="uid://dbmvmt58dohu6" path="res://assets/sprites/Tilemap/fake files.bmp" id="1_ttefc"]
+[ext_resource type="PackedScene" uid="uid://dtmf01wjumxnl" path="res://scenes/player_prototype.tscn" id="2_mm6sr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37a8r"]
 texture = ExtResource("1_ttefc")
@@ -10255,20 +10256,11 @@ texture = ExtResource("1_ttefc")
 74:30/0 = 0
 74:31/0 = 0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a8f11"]
-load_path = "res://.godot/imported/wall_placeholder.jpg-7a4089418405f26001cf3d439bdd0b99.ctex"
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0fwhi"]
-texture = SubResource("CompressedTexture2D_a8f11")
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
 [sub_resource type="TileSet" id="TileSet_75hwq"]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/2 = SubResource("TileSetAtlasSource_0fwhi")
 sources/0 = SubResource("TileSetAtlasSource_37a8r")
 
 [node name="Node2D" type="Node2D"]
@@ -10276,3 +10268,11 @@ sources/0 = SubResource("TileSetAtlasSource_37a8r")
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD/////AAAPAAkAAAD//wAAAAAIAAsAAAAAAP//AAAQAAkAAAABAP//AAAJAAkAAAACAP//AAAQAAkAAAAFAP//AAAJAAkAAAAGAP//AAAQAAkAAAAHAP//AAAJAAkAAAAIAP//AAAQAAkAAAAMAP//AAAQAAkAAAALAP//AAAQAAkAAAANAP//AAAQAAkAAAAOAP//AAAJAAkAAAARAP//AAAQAAkAAAASAP//AAAJAAkAAAATAP//AAAQAAkAAAAUAP//AAAQAAkAAAAAAAAAAAAJAAkAADABAAAAAAAQAAsAAAACAAAAAAAQAAsAAAAFAAAAAAAQAAsAAAAGAAAAAAAJAAkAADAHAAAAAAAJAAkAADAIAAAAAAAQAAsAAAALAAAAAAAQAAsAAAAMAAAAAAAJAAkAADANAAAAAAAQAAsAAAAOAAAAAAAQAAsAAAARAAAAAAAQAAsAAAASAAAAAAAJAAkAADATAAAAAAAQAAsAAAAUAAAAAAAJAAkAADADAP//AAAQAAoAAAAEAP//AAAQAAoAAAAEAAAAAAAQAAoAAAADAAAAAAAQAAoAAAAJAP//AAAJAAoAAAAKAP//AAAQAAoAAAAKAAAAAAAGAAsAAAAJAAAAAAAQAAoAAAAPAP//AAAGAAsAAAAQAP//AAAQAAoAAAAQAAAAAAAQAAoAAAAPAAAAAAAQAAoAAAA=")
 tile_set = SubResource("TileSet_75hwq")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_mm6sr")]
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(5, 5)
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+one_shot = true
