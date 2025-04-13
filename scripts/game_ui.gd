@@ -17,14 +17,14 @@ func unload_level():
 	
 func load_level(level_name : String):
 	unload_level()
-	var level_path := "res://scenes/%s.tscn" % level_name
+	var level_path := "res://scenes/screens/%s.tscn" % level_name
 	var level_resource := load(level_path)
 	if(level_resource):
 		get_tree().change_scene_to_file(level_path)
 
 func add_level(level_name : String):
 	unload_level()
-	var level_path := "res://scenes/%s.tscn" % level_name
+	var level_path := "res://scenes/screens/%s.tscn" % level_name
 	var level_resource := load(level_path)
 	exit_button.visible = true; 
 	if(level_resource):
