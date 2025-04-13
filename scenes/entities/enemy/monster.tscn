@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://kmdpk3r1ei8m"]
+
+[ext_resource type="Script" path="res://Enemy/monster.gd" id="1_7fyur"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tmnne"]
+size = Vector2(300, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pqca"]
+size = Vector2(302, 302)
+
+[node name="Monster" type="Node2D"]
+script = ExtResource("1_7fyur")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_tmnne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_6pqca")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 544)

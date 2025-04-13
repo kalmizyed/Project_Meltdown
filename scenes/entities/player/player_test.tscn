@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c88s5fltgtsmt"]
+
+[ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="1_qujb4"]
+[ext_resource type="PackedScene" uid="uid://1kj01bmv1h8j" path="res://scenes/objects/EmergencyLight.tscn" id="2_y0nju"]
+[ext_resource type="PackedScene" uid="uid://kmdpk3r1ei8m" path="res://scenes/entities/enemy/monster.tscn" id="3_b4ool"]
+
+[node name="PlayerTest" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="player" parent="." instance=ExtResource("1_qujb4")]
+scale = Vector2(0.25, 0.25)
+
+[node name="EmergencyLight" parent="." instance=ExtResource("2_y0nju")]
+position = Vector2(-204, 1)
+scale = Vector2(0.2, 0.2)
+
+[node name="EmergencyLight2" parent="." instance=ExtResource("2_y0nju")]
+position = Vector2(-204, -76)
+scale = Vector2(0.2, 0.2)
+
+[node name="Monster" parent="." instance=ExtResource("3_b4ool")]
+position = Vector2(-384, 32)
+scale = Vector2(0.4, 0.4)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
+position = Vector2(-152, 35)
+color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+energy = 16.0

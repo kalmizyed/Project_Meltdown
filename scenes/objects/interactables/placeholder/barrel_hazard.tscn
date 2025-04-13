@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cajgf3fg835e5"]
+
+[ext_resource type="Texture2D" uid="uid://edglpmtpo0px" path="res://assets/sprites/objects/Barrel_Sprite.png" id="1_uflcv"]
+[ext_resource type="Script" path="res://scripts/interactables/hazard_interactable.gd" id="2_528kt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dmwae"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kxd8k"]
+radius = 7.0
+height = 20.0
+
+[node name="BarrelHazard" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_uflcv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dmwae")
+
+[node name="HazardInteractable" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("2_528kt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardInteractable"]
+shape = SubResource("CapsuleShape2D_kxd8k")
+
+[connection signal="body_entered" from="HazardInteractable" to="HazardInteractable" method="_on_body_entered"]
