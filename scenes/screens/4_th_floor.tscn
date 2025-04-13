@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dbmvmt58dohu6" path="res://assets/sprites/Tilemap/fake files.bmp" id="1_mh7t0"]
 [ext_resource type="Texture2D" uid="uid://6osglomaqj8e" path="res://assets/sprites/placeholder/wall_placeholder.jpg" id="1_rlysi"]
-[ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/game_ui.tscn" id="2_hc5d5"]
-[ext_resource type="PackedScene" uid="uid://dtmf01wjumxnl" path="res://scenes/player_prototype.tscn" id="3_yijqu"]
+[ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="2_hc5d5"]
+[ext_resource type="PackedScene" uid="uid://dtmf01wjumxnl" path="res://scenes/entities/player_prototype.tscn" id="3_yijqu"]
 [ext_resource type="Script" path="res://scripts/entities/player_placeholder.gd" id="4_d1aih"]
 [ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="4_hpp78"]
 [ext_resource type="PackedScene" uid="uid://bx1hc1l0260tg" path="res://scenes/interactables/placeholder/diary.tscn" id="5_6a3lc"]
