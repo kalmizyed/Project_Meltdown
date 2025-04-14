@@ -40,3 +40,5 @@ stream = ExtResource("5_pm0us")
 
 [node name="Book" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_2amb3")
+
+[node name="CinematicPlayer" type="AudioStreamPlayer" parent="."]

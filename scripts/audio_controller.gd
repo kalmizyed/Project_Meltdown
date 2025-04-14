@@ -7,6 +7,12 @@ func _ready():
 	if not mute_music:
 		play_music()
 
+func load_mp3(path):
+	var file = FileAccess.open(path, FileAccess.READ)
+	var sound = AudioStreamMP3.new()
+	sound.data = file.get_buffer(file.get_length())
+	return sound
+
 func play_music():
 	if not mute:
 		$Music.play()
@@ -38,3 +44,12 @@ func play_bag_open() -> void:
 func play_book_pickup() -> void:
 	if not mute:
 		$Book.play()
+
+func play_cinematic(cinematic_name : String):
+	var cinematic_path := "res://assets/cinematics/%s.mp3" % cinematic_name
+	$CinematicPlayer.stream = load_mp3(cinematic_path)
+	if not mute:
+		mute_music = true
+		$Music.stop()
+		$CinematicPlayer.play()
+		mute_music = false
