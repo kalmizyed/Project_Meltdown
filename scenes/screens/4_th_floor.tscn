@@ -10325,12 +10325,12 @@ position = Vector2(154, -131)
 switches = [NodePath("../Lever"), NodePath("../Lever2")]
 canOpen = true
 
-[node name="SceneDoor" parent="Door2" instance=ExtResource("12_mkrxq")]
-position = Vector2(-123.942, -128.572)
-destination = "title_screen"
-
 [node name="Lever" parent="." instance=ExtResource("9_l0j8o")]
 position = Vector2(136.086, -172.643)
 
 [node name="Lever2" parent="." instance=ExtResource("9_l0j8o")]
 position = Vector2(162, -173)
+
+[node name="SceneDoor" parent="." instance=ExtResource("12_mkrxq")]
+position = Vector2(30.058, -259.572)
+destination = "title_screen"
