@@ -10333,4 +10333,4 @@ position = Vector2(162, -173)
 
 [node name="SceneDoor" parent="." instance=ExtResource("12_mkrxq")]
 position = Vector2(30.058, -259.572)
-destination = "title_screen"
+destination = "kaden-puzzle1"

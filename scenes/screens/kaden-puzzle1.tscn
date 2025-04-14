@@ -1,0 +1,126 @@
+[gd_scene load_steps=14 format=4 uid="uid://bu6s41tcuqskh"]
+
+[ext_resource type="Texture2D" uid="uid://6osglomaqj8e" path="res://assets/sprites/placeholder/wall_placeholder.jpg" id="1_pgkd8"]
+[ext_resource type="PackedScene" uid="uid://ohmcb444fq2p" path="res://scenes/objects/interactables/door.tscn" id="2_80pxs"]
+[ext_resource type="PackedScene" uid="uid://d33iws2i65j2b" path="res://scenes/objects/interactables/lever.tscn" id="3_yg47d"]
+[ext_resource type="PackedScene" uid="uid://dtmf01wjumxnl" path="res://scenes/entities/player/player_prototype.tscn" id="4_kiia2"]
+[ext_resource type="Script" path="res://scripts/entities/player_placeholder.gd" id="5_dc08x"]
+[ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="5_v6bg1"]
+[ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="6_uudd2"]
+[ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="8_yos32"]
+[ext_resource type="Texture2D" uid="uid://nx4yk31jgq6h" path="res://assets/sprites/objects/Key_Card_Beta_Inventory_Sprite.png" id="9_otsl0"]
+[ext_resource type="Script" path="res://scripts/interactables/collectable_interactable.gd" id="10_luy1m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tr1r"]
+texture = ExtResource("1_pgkd8")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
+
+[sub_resource type="TileSet" id="TileSet_yb7mh"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5tr1r")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oog2y"]
+radius = 374.61
+
+[node name="PuzzleRoom" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAD8/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAIAAMAAAAAAAAAAAAJAAMAAAAAAAAAAAAKAAMAAAAAAAAAAAALAAMAAAAAAAAAAAAMAAMAAAAAAAAAAAANAAMAAAAAAAAAAAAOAAMAAAAAAAAAAAAPAAMAAAAAAAAAAAD6/wMAAAAAAAAAAAD5/wMAAAAAAAAAAAD4/wMAAAAAAAAAAAD3/wMAAAAAAAAAAAD2/wMAAAAAAAAAAAD1/wMAAAAAAAAAAAD6/wIAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wAAAAAAAAAAAAD6////AAAAAAAAAAD6//7/AAAAAAAAAAD6//3/AAAAAAAAAAD6//z/AAAAAAAAAAD7//z/AAAAAAAAAAD9//z/AAAAAAAAAAD+//z/AAAAAAAAAAD///z/AAAAAAAAAAAAAPz/AAAAAAAAAAABAPz/AAAAAAAAAAACAPz/AAAAAAAAAAADAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAPz/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAIAAAAAAAAAAAD6//r/AAAAAAAAAAD6//n/AAAAAAAAAAD6//b/AAAAAAAAAAD7//b/AAAAAAAAAAD8//b/AAAAAAAAAAD9//b/AAAAAAAAAAD+//b/AAAAAAAAAAD///b/AAAAAAAAAAAAAPb/AAAAAAAAAAABAPb/AAAAAAAAAAACAPb/AAAAAAAAAAADAPb/AAAAAAAAAAADAPf/AAAAAAAAAAADAPj/AAAAAAAAAAADAPn/AAAAAAAAAAADAPr/AAAAAAAAAAADAPv/AAAAAAAAAAAHAPz/AAAAAAAAAAAIAPz/AAAAAAAAAAAKAPz/AAAAAAAAAAALAPz/AAAAAAAAAAALAP3/AAAAAAAAAAALAP7/AAAAAAAAAAALAP//AAAAAAAAAAALAAAAAAAAAAAAAAALAAIAAAAAAAAAAAAMAPz/AAAAAAAAAAANAPz/AAAAAAAAAAAOAPz/AAAAAAAAAAAPAPz/AAAAAAAAAAAPAP3/AAAAAAAAAAAPAP7/AAAAAAAAAAAPAP//AAAAAAAAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAEAPb/AAAAAAAAAAAFAPb/AAAAAAAAAAAGAPb/AAAAAAAAAAAHAPb/AAAAAAAAAAAIAPb/AAAAAAAAAAAJAPb/AAAAAAAAAAAKAPb/AAAAAAAAAAALAPb/AAAAAAAAAAAMAPb/AAAAAAAAAAANAPb/AAAAAAAAAAAOAPb/AAAAAAAAAAAPAPb/AAAAAAAAAAAPAPf/AAAAAAAAAAAPAPj/AAAAAAAAAAAPAPn/AAAAAAAAAAAPAPr/AAAAAAAAAAAPAPv/AAAAAAAAAAAKAPv/AAAAAAAAAAAKAPr/AAAAAAAAAAAKAPn/AAAAAAAAAAAKAPf/AAAAAAAAAAD6//j/AAAAAAAAAAD5//r/AAAAAAAAAAD4//r/AAAAAAAAAAD3//r/AAAAAAAAAAD2//r/AAAAAAAAAAD1//r/AAAAAAAAAAD1//v/AAAAAAAAAAD1//z/AAAAAAAAAAD1//3/AAAAAAAAAAD1//7/AAAAAAAAAAD1////AAAAAAAAAAD1/wAAAAAAAAAAAAD1/wEAAAAAAAAAAAD1/wIAAAAAAAAAAAD1//n/AAAAAAAAAAD1//j/AAAAAAAAAAD1//f/AAAAAAAAAAD1//b/AAAAAAAAAAD2//b/AAAAAAAAAAD3//b/AAAAAAAAAAD4//b/AAAAAAAAAAD5//b/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_yb7mh")
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door" parent="Doors" node_paths=PackedStringArray("switches") instance=ExtResource("2_80pxs")]
+position = Vector2(104, 24)
+switches = [NodePath("../../Levers/Lever3"), NodePath("../../Levers/Lever4"), NodePath("../../Levers/Lever7"), NodePath("../../Levers/Lever9"), NodePath("../../Levers/Lever11")]
+
+[node name="Door2" parent="Doors" node_paths=PackedStringArray("switches") instance=ExtResource("2_80pxs")]
+position = Vector2(-56, -57)
+switches = [NodePath("../../Levers/Lever2"), NodePath("../../Levers/Lever5"), NodePath("../../Levers/Lever10"), NodePath("../../Levers/Lever11")]
+
+[node name="Door3" parent="Doors" node_paths=PackedStringArray("switches") instance=ExtResource("2_80pxs")]
+position = Vector2(184, 24)
+switches = [NodePath("../../Levers/Lever7")]
+
+[node name="Door4" parent="Doors" node_paths=PackedStringArray("switches") instance=ExtResource("2_80pxs")]
+position = Vector2(151.959, -55.9617)
+switches = [NodePath("../../Levers/Lever6"), NodePath("../../Levers/Lever9")]
+
+[node name="Door5" parent="Doors" node_paths=PackedStringArray("switches") instance=ExtResource("2_80pxs")]
+position = Vector2(-87.8971, -136.016)
+switches = [NodePath("../../Levers/Lever4"), NodePath("../../Levers/Lever8")]
+
+[node name="Door6" parent="Doors" node_paths=PackedStringArray("switches") instance=ExtResource("2_80pxs")]
+position = Vector2(-88, -72)
+switches = [NodePath("../../Levers/Lever"), NodePath("../../Levers/Lever3"), NodePath("../../Levers/Lever6"), NodePath("../../Levers/Lever8"), NodePath("../../Levers/Lever10")]
+
+[node name="Door7" parent="Doors" node_paths=PackedStringArray("switches") instance=ExtResource("2_80pxs")]
+position = Vector2(167.859, -120.056)
+switches = [NodePath("../../Levers/Lever5")]
+
+[node name="Levers" type="Node" parent="."]
+
+[node name="Lever" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(-23, -37)
+
+[node name="Lever2" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(40, -37)
+
+[node name="Lever3" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(129, 37)
+
+[node name="Lever4" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(160, 37)
+
+[node name="Lever5" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(32, -105)
+
+[node name="Lever6" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(216, -36)
+
+[node name="Lever7" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(77, -128)
+
+[node name="Lever8" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(77, -82)
+
+[node name="Lever9" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(-145, -121)
+
+[node name="Lever10" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(-146, -40)
+
+[node name="Lever11" parent="Levers" instance=ExtResource("3_yg47d")]
+position = Vector2(-145, 3)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_kiia2")]
+position = Vector2(7.565, 33.335)
+script = ExtResource("5_dc08x")
+
+[node name="GreySprite" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
+scale = Vector2(2.12364, 2.24516)
+texture = ExtResource("6_uudd2")
+
+[node name="GameUI" parent="CharacterBody2D" instance=ExtResource("5_v6bg1")]
+position = Vector2(-576, -328)
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="SceneDoor" parent="." instance=ExtResource("8_yos32")]
+position = Vector2(8, 56)
+destination = "4_th_floor"
+
+[node name="PlaceholderPrize" type="Sprite2D" parent="."]
+position = Vector2(230, -135)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("9_otsl0")
+
+[node name="CollectableInteractable" type="Area2D" parent="PlaceholderPrize"]
+script = ExtResource("10_luy1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlaceholderPrize/CollectableInteractable"]
+shape = SubResource("CircleShape2D_oog2y")
