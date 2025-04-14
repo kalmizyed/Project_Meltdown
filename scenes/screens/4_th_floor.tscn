@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://b6k6vcqoom6ro"]
+[gd_scene load_steps=17 format=4 uid="uid://b6k6vcqoom6ro"]
 
 [ext_resource type="Texture2D" uid="uid://dbmvmt58dohu6" path="res://assets/sprites/Tilemap/fake files.bmp" id="1_mh7t0"]
 [ext_resource type="Texture2D" uid="uid://6osglomaqj8e" path="res://assets/sprites/placeholder/wall_placeholder.jpg" id="1_rlysi"]
@@ -7,11 +7,12 @@
 [ext_resource type="Script" path="res://scripts/entities/player_placeholder.gd" id="4_d1aih"]
 [ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="4_hpp78"]
 [ext_resource type="PackedScene" uid="uid://bx1hc1l0260tg" path="res://scenes/objects/interactables/placeholder/diary.tscn" id="5_6a3lc"]
-[ext_resource type="PackedScene" uid="uid://b6pdbihab0037" path="res://scenes/objects/interactables/placeholder/door.tscn" id="6_8vpbc"]
 [ext_resource type="PackedScene" uid="uid://ctdg1jkk0tb0r" path="res://scenes/objects/interactables/placeholder/flashlight.tscn" id="8_ilyv6"]
-[ext_resource type="PackedScene" uid="uid://d33iws2i65j2b" path="res://scenes/objects/interactables/placeholder/lever.tscn" id="9_l0j8o"]
+[ext_resource type="PackedScene" uid="uid://d33iws2i65j2b" path="res://scenes/objects/interactables/lever.tscn" id="9_l0j8o"]
 [ext_resource type="PackedScene" uid="uid://cajgf3fg835e5" path="res://scenes/objects/interactables/placeholder/barrel_hazard.tscn" id="10_2h0yi"]
 [ext_resource type="PackedScene" uid="uid://duot6ct56imwc" path="res://scenes/objects/interactables/placeholder/crate.tscn" id="11_vfyti"]
+[ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="12_mkrxq"]
+[ext_resource type="PackedScene" uid="uid://ohmcb444fq2p" path="res://scenes/objects/interactables/door.tscn" id="13_e7sw0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t0ghb"]
 texture = ExtResource("1_mh7t0")
@@ -10294,14 +10295,8 @@ position = Vector2(176, 368)
 [node name="Diary3" parent="." instance=ExtResource("5_6a3lc")]
 position = Vector2(528, -40)
 
-[node name="Door" parent="." instance=ExtResource("6_8vpbc")]
-position = Vector2(32, -256)
-
 [node name="Flashlight" parent="." instance=ExtResource("8_ilyv6")]
 position = Vector2(331, -224)
-
-[node name="Lever" parent="." instance=ExtResource("9_l0j8o")]
-position = Vector2(151, -171)
 
 [node name="BarrelHazard" parent="." instance=ExtResource("10_2h0yi")]
 position = Vector2(351, 178)
@@ -10314,6 +10309,7 @@ position = Vector2(32, 72)
 script = ExtResource("4_d1aih")
 
 [node name="GreySprite" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
 scale = Vector2(2.12364, 2.24516)
 texture = ExtResource("4_hpp78")
 
@@ -10323,3 +10319,18 @@ position = Vector2(-576, -328)
 [node name="Timer" type="Timer" parent="CharacterBody2D"]
 unique_name_in_owner = true
 one_shot = true
+
+[node name="Door2" parent="." node_paths=PackedStringArray("switches") instance=ExtResource("13_e7sw0")]
+position = Vector2(154, -131)
+switches = [NodePath("../Lever"), NodePath("../Lever2")]
+canOpen = true
+
+[node name="SceneDoor" parent="Door2" instance=ExtResource("12_mkrxq")]
+position = Vector2(-123.942, -128.572)
+destination = "title_screen"
+
+[node name="Lever" parent="." instance=ExtResource("9_l0j8o")]
+position = Vector2(136.086, -172.643)
+
+[node name="Lever2" parent="." instance=ExtResource("9_l0j8o")]
+position = Vector2(162, -173)
