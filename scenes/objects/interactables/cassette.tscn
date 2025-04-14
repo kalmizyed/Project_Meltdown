@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmb3dpj7pwc7k"]
+
+[ext_resource type="Texture2D" uid="uid://dgnb76qxiy61l" path="res://assets/sprites/objects/Video_Tape_Inventory_Sprite.png" id="1_rc3np"]
+[ext_resource type="Script" path="res://scripts/objects/cassette.gd" id="1_vx5aq"]
+[ext_resource type="Script" path="res://scripts/interactables/cassette_interactable.gd" id="2_7yark"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88bgf"]
+size = Vector2(39.125, 52.5)
+
+[node name="Cassette" type="StaticBody2D"]
+script = ExtResource("1_vx5aq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("1_rc3np")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5625, -3.75)
+shape = SubResource("RectangleShape2D_88bgf")
+
+[node name="CassetteInteractable" type="Area2D" parent="."]
+script = ExtResource("2_7yark")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CassetteInteractable"]
+position = Vector2(-5.5625, -3.75)
+shape = SubResource("RectangleShape2D_88bgf")
