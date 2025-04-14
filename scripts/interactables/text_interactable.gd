@@ -7,11 +7,8 @@ signal text_popped_up(txt: String)
 @export var text: String
 
 func _ready() -> void:
-	text_popped_up.connect(_on_text_popped_up)
+	pass
 
 func _interact() -> void:
 	AudioController.play_book_pickup()
 	text_popped_up.emit(text)
-
-func _on_text_popped_up(txt: String) -> void:
-	print(txt)

@@ -11,11 +11,8 @@ signal switch_flipped(switch_flag: String, switch_state: bool)
 @export var state: bool
 
 func _ready() -> void:
-	switch_flipped.connect(_on_switch_flipped)
+	pass
 
 func _interact() -> void:
 	state = !state
 	switch_flipped.emit(flag, state)
-
-func _on_switch_flipped(switch_flag: String, switch_state: bool) -> void:
-	print('Switched with flag \"' + switch_flag + '\" flipped to state \"' + str(switch_state) + '\"!')

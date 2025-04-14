@@ -1,12 +1,14 @@
 class_name Interactable
 extends Area2D
 
+signal interacted()
+
 func _ready() -> void:
 	self.body_entered.connect(_on_body_entered)
 
 ## Called when the player uses the "interact" action while in the interactable's hitbox.
 func _interact() -> void:
-	pass
+	interacted.emit()
 	
 ## Called when the player enters the interactable's hitbox.
 func _entered() -> void:
