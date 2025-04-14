@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://wf4gqdb2nukf"]
+
+[ext_resource type="Texture2D" uid="uid://cq8pblnjct5nd" path="res://assets/black_screen_for_cinematic.jpg" id="1_mqkuy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(592.25, 317.25)
+scale = Vector2(6.26444, 3.82)
+texture = ExtResource("1_mqkuy")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 8.0
+offset_top = 513.0
+offset_right = 1158.0
+offset_bottom = 580.0
