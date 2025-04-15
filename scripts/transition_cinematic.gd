@@ -27,6 +27,6 @@ func _process(delta):
 	if(time_taken<=END_TIME):
 		$ProgressBar.value = time_taken
 		$RichTextLabel.text = sec_to_time(time_taken) + "/1:05"
-	else:
-		if(time_taken-2>=END_TIME): #wait 2 seconds then switch scenes
+	#else:
+		#if(time_taken-2>=END_TIME): #wait 2 seconds then switch scenes
 			#load next level
