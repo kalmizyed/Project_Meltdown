@@ -22,6 +22,7 @@ scale = Vector2(0.2, 0.2)
 [node name="Monster" parent="." instance=ExtResource("3_b4ool")]
 position = Vector2(-384, 32)
 scale = Vector2(0.4, 0.4)
+script = null
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 visible = false
