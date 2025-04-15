@@ -54,7 +54,7 @@ func update_animation_parameters():
 	else:
 		aniTree["parameters/conditions/yoink"] = false
 
-	if Input.is_action_just_pressed("Push") || Input.is_action_just_pressed("Interact"):
+	if Input.is_action_just_pressed("Push") || Input.is_action_just_pressed("interact"):
 		aniTree["parameters/conditions/push"] = true
 	else:
 		aniTree["parameters/conditions/push"] = false
