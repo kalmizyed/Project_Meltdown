@@ -42,3 +42,5 @@ stream = ExtResource("5_pm0us")
 stream = ExtResource("6_2amb3")
 
 [node name="CinematicPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="finished" from="CinematicPlayer" to="." method="_on_cinematic_player_finished"]

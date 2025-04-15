@@ -14,8 +14,6 @@ func _ready() -> void:
 
 func _interact() -> void:
 	AudioController.play_cinematic(cinematic_name)
-	#var cinematic_path := "res://assets/cinematics/%s.mp3" % cinematic_name
-	#print(cinematic_path)
 	item_collected.emit(item_node)
 
 func _on_item_collected(item: Node2D) -> void:

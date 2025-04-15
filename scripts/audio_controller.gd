@@ -53,3 +53,7 @@ func play_cinematic(cinematic_name : String):
 		$Music.stop()
 		$CinematicPlayer.play()
 		mute_music = false
+
+
+func _on_cinematic_player_finished():
+	$Music.play()
