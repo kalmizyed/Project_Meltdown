@@ -108,7 +108,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4imj2"]
-size = Vector2(125, 384)
+size = Vector2(125, 338)
 
 [sub_resource type="Animation" id="Animation_iq874"]
 resource_name = "Grab_back"
@@ -623,7 +623,7 @@ visible = false
 sprite_frames = SubResource("SpriteFrames_08nqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 54)
+position = Vector2(-0.5, 67)
 shape = SubResource("RectangleShape2D_4imj2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
