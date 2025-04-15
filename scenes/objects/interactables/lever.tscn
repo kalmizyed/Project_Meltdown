@@ -39,7 +39,6 @@ sprite_frames = SubResource("SpriteFrames_p0orw")
 [node name="SwitchInteractable" type="Area2D" parent="."]
 collision_mask = 2
 script = ExtResource("4_xgjqx")
-flag = "Lever"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchInteractable"]
 shape = SubResource("CircleShape2D_418r4")

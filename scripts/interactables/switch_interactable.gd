@@ -11,7 +11,8 @@ signal switch_flipped(switch_flag: String, switch_state: bool)
 @export var state: bool
 
 func _ready() -> void:
-	pass
+	if not flag:
+		flag = get_parent().name
 
 func _interact() -> void:
 	state = !state
