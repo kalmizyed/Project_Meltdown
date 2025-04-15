@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://dcfv5io1xfwva"]
+[gd_scene load_steps=9 format=4 uid="uid://dcfv5io1xfwva"]
 
 [ext_resource type="Texture2D" uid="uid://dbmvmt58dohu6" path="res://assets/sprites/Tilemap/fake files.bmp" id="1_ttefc"]
 [ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="2_ks3wh"]
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_uto2h"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="4_2mcoe"]
 [ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="4_cnhci"]
+[ext_resource type="PackedScene" uid="uid://cmb3dpj7pwc7k" path="res://scenes/objects/interactables/cassette.tscn" id="6_bbaui"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37a8r"]
 texture = ExtResource("1_ttefc")
@@ -10313,3 +10314,8 @@ texture = ExtResource("4_cnhci")
 
 [node name="GameUI" parent="player" instance=ExtResource("4_2mcoe")]
 position = Vector2(-601.94, -328)
+
+[node name="Cassette" parent="." instance=ExtResource("6_bbaui")]
+position = Vector2(330, 2)
+scale = Vector2(0.25, 0.25)
+cinematic_name = "supervisor_murders_robbie"
