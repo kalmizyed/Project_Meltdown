@@ -612,7 +612,7 @@ states/Push/position = Vector2(307, 34)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_ssrx8")
 states/Walk/position = Vector2(551, 34)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0vg48"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_h3qq1"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_8mgma"), "Walk", "Grab", SubResource("AnimationNodeStateMachineTransition_hfwlm"), "Grab", "Walk", SubResource("AnimationNodeStateMachineTransition_m87k3"), "Grab", "Idle", SubResource("AnimationNodeStateMachineTransition_p5d4n"), "Idle", "Grab", SubResource("AnimationNodeStateMachineTransition_h5j1k"), "Walk", "Push", SubResource("AnimationNodeStateMachineTransition_n52c8"), "Push", "Walk", SubResource("AnimationNodeStateMachineTransition_72747"), "Push", "Idle", SubResource("AnimationNodeStateMachineTransition_02p5h"), "Idle", "Push", SubResource("AnimationNodeStateMachineTransition_wo7pb"), "Hide", "Walk", SubResource("AnimationNodeStateMachineTransition_kpqnw"), "Walk", "Hide", SubResource("AnimationNodeStateMachineTransition_mfpb1"), "Hide", "Idle", SubResource("AnimationNodeStateMachineTransition_k8di5"), "Idle", "Hide", SubResource("AnimationNodeStateMachineTransition_skolm")]
-graph_offset = Vector2(-203, -4)
+graph_offset = Vector2(-203, -42.3197)
 
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
