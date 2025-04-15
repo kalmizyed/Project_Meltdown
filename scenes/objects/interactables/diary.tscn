@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b01ehmvboywhe"]
+
+[ext_resource type="Script" path="res://scripts/interactables/collectable_interactable.gd" id="1_ecrmk"]
+[ext_resource type="Script" path="res://scripts/objects/diary.gd" id="1_ulhgk"]
+[ext_resource type="Texture2D" uid="uid://sktr2hqu3erd" path="res://assets/sprites/objects/Diary_Inventory_Sprite.png" id="2_y86qe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0w47"]
+size = Vector2(13, 14)
+
+[node name="Diary" type="Node2D"]
+script = ExtResource("1_ulhgk")
+
+[node name="CollectableInteractable" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("1_ecrmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableInteractable"]
+shape = SubResource("RectangleShape2D_i0w47")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_y86qe")
