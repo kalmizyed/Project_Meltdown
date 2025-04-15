@@ -8,6 +8,7 @@ signal item_collected(item: Node2D)
 @export var item_node: Node2D
 
 func _ready() -> void:
+	item_collected.connect(InventorySystem.on_item_collected)
 	if not item_node: item_node = self.get_parent()
 
 func _interact() -> void:
