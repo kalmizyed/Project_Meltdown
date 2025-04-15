@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://6osglomaqj8e" path="res://assets/sprites/placeholder/wall_placeholder.jpg" id="1_pgkd8"]
 [ext_resource type="PackedScene" uid="uid://ohmcb444fq2p" path="res://scenes/objects/interactables/door.tscn" id="2_80pxs"]
 [ext_resource type="PackedScene" uid="uid://d33iws2i65j2b" path="res://scenes/objects/interactables/lever.tscn" id="3_yg47d"]
-[ext_resource type="PackedScene" uid="uid://dtmf01wjumxnl" path="res://scenes/entities/player/player_prototype.tscn" id="4_kiia2"]
+[ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="5_5urk2"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="5_v6bg1"]
 [ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="6_uudd2"]
 [ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="8_yos32"]
@@ -93,24 +93,21 @@ position = Vector2(-146, -40)
 [node name="Lever11" parent="Levers" instance=ExtResource("3_yg47d")]
 position = Vector2(-145, 3)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_kiia2")]
-position = Vector2(7.565, 33.335)
-
-[node name="GreySprite" type="Sprite2D" parent="CharacterBody2D"]
-visible = false
-scale = Vector2(2.12364, 2.24516)
-texture = ExtResource("6_uudd2")
-
-[node name="GameUI" parent="CharacterBody2D" instance=ExtResource("5_v6bg1")]
-position = Vector2(-576, -328)
-
-[node name="Timer" type="Timer" parent="CharacterBody2D"]
-unique_name_in_owner = true
-one_shot = true
-
 [node name="SceneDoor" parent="." instance=ExtResource("8_yos32")]
 position = Vector2(8, 56)
 destination = "Emerson_left_wing"
+
+[node name="player" parent="." instance=ExtResource("5_5urk2")]
+position = Vector2(9, 37)
+
+[node name="GreySprite" type="Sprite2D" parent="player"]
+visible = false
+position = Vector2(7.565, 33.335)
+scale = Vector2(2.12364, 2.24516)
+texture = ExtResource("6_uudd2")
+
+[node name="GameUI" parent="player" instance=ExtResource("5_v6bg1")]
+position = Vector2(-568.435, -294.665)
 
 [node name="PlaceholderPrize" type="Sprite2D" parent="."]
 position = Vector2(230, -135)

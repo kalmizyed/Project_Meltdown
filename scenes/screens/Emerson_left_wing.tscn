@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dbmvmt58dohu6" path="res://assets/sprites/Tilemap/fake files.bmp" id="1_ttefc"]
 [ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="2_ks3wh"]
-[ext_resource type="PackedScene" uid="uid://dtmf01wjumxnl" path="res://scenes/entities/player/player_prototype.tscn" id="3_3axdj"]
+[ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_uto2h"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="4_2mcoe"]
 [ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="4_cnhci"]
 
@@ -10305,15 +10305,11 @@ tile_set = SubResource("TileSet_75hwq")
 position = Vector2(56, -24)
 destination = "kaden-puzzle1"
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_3axdj")]
+[node name="player" parent="." instance=ExtResource("2_uto2h")]
 
-[node name="GreySprite" type="Sprite2D" parent="CharacterBody2D"]
+[node name="GreySprite" type="Sprite2D" parent="player"]
 scale = Vector2(2.12364, 2.24516)
 texture = ExtResource("4_cnhci")
 
-[node name="GameUI" parent="CharacterBody2D" instance=ExtResource("4_2mcoe")]
-position = Vector2(-576, -328)
-
-[node name="Timer" type="Timer" parent="CharacterBody2D"]
-unique_name_in_owner = true
-one_shot = true
+[node name="GameUI" parent="player" instance=ExtResource("4_2mcoe")]
+position = Vector2(-601.94, -328)

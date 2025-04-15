@@ -108,7 +108,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4imj2"]
-size = Vector2(125, 384)
+size = Vector2(5, 14)
 
 [sub_resource type="Animation" id="Animation_iq874"]
 resource_name = "Grab_back"
@@ -615,18 +615,21 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-203, -4)
 
 [node name="player" type="CharacterBody2D"]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_j6ksw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
+scale = Vector2(0.035, 0.035)
 sprite_frames = SubResource("SpriteFrames_08nqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 54)
+position = Vector2(-0.5, 2)
 shape = SubResource("RectangleShape2D_4imj2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.035, 0.035)
 texture = ExtResource("3_idwhd")
 hframes = 4
 vframes = 8
@@ -651,4 +654,5 @@ parameters/Push/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.035, 0.035)
 texture = ExtResource("3_2jc7u")
