@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://dcfv5io1xfwva"]
+[gd_scene load_steps=8 format=4 uid="uid://dcfv5io1xfwva"]
 
 [ext_resource type="Texture2D" uid="uid://dbmvmt58dohu6" path="res://assets/sprites/Tilemap/fake files.bmp" id="1_ttefc"]
 [ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="2_ks3wh"]
+[ext_resource type="PackedScene" uid="uid://dtmf01wjumxnl" path="res://scenes/entities/player/player_prototype.tscn" id="3_3axdj"]
+[ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="4_2mcoe"]
+[ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="4_cnhci"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37a8r"]
 texture = ExtResource("1_ttefc")
@@ -914,8 +917,11 @@ texture = ExtResource("1_ttefc")
 6:9/0 = 0
 7:9/0 = 0
 8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 8, -6.875, 8, -8, -8, -8, -8, 8, -7, 8)
 9:9/0 = 0
+9:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -6.98268, 8, -8, -8, -8)
 10:9/0 = 0
+10:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.89429, 6.8059, -6.89429, 6.98268, 8, 8, 8, 8, -8, -8, -8)
 11:9/0 = 0
 12:9/0 = 0
 13:9/0 = 0
@@ -923,12 +929,14 @@ texture = ExtResource("1_ttefc")
 15:9/0 = 0
 15:9/0/terrain_set = 0
 15:9/0/terrain = 0
+15:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.90625, -6.96875, 8, -6.96875, 8, -8, -8, -8, -8, 8, -7.03125, 8)
 15:9/0/terrains_peering_bit/right_side = 0
 15:9/0/terrains_peering_bit/bottom_right_corner = 0
 15:9/0/terrains_peering_bit/bottom_side = 0
 16:9/0 = 0
 16:9/0/terrain_set = 0
 16:9/0/terrain = 0
+16:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.96875, 8, -7.03125, 8, -8, -8, -8)
 16:9/0/terrains_peering_bit/right_side = 0
 16:9/0/terrains_peering_bit/bottom_right_corner = 0
 16:9/0/terrains_peering_bit/bottom_side = 0
@@ -937,12 +945,14 @@ texture = ExtResource("1_ttefc")
 17:9/0 = 0
 17:9/0/terrain_set = 0
 17:9/0/terrain = 0
+17:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.91639, 7.04897, -6.91639, 7.04897, 8, 8, 8, 8, -8, -8, -8)
 17:9/0/terrains_peering_bit/bottom_side = 0
 17:9/0/terrains_peering_bit/bottom_left_corner = 0
 17:9/0/terrains_peering_bit/left_side = 0
 18:9/0 = 0
 18:9/0/terrain_set = 0
 18:9/0/terrain = 0
+18:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(7, 8, 8, 8, 8, -8, 7, -8)
 18:9/0/terrains_peering_bit/bottom_side = 0
 18:9/0/terrains_peering_bit/bottom_left_corner = 0
 18:9/0/terrains_peering_bit/left_side = 0
@@ -950,6 +960,7 @@ texture = ExtResource("1_ttefc")
 19:9/0 = 0
 19:9/0/terrain_set = 0
 19:9/0/terrain = 0
+19:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, -7, 8, -7, -8)
 19:9/0/terrains_peering_bit/right_side = 0
 19:9/0/terrains_peering_bit/bottom_right_corner = 0
 19:9/0/terrains_peering_bit/bottom_side = 0
@@ -957,6 +968,7 @@ texture = ExtResource("1_ttefc")
 20:9/0 = 0
 20:9/0/terrain_set = 0
 20:9/0/terrain = 0
+20:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 7, -8, 8, 8, 8, 8, 7)
 20:9/0/terrains_peering_bit/right_side = 0
 20:9/0/terrains_peering_bit/left_side = 0
 20:9/0/terrains_peering_bit/top_left_corner = 0
@@ -964,6 +976,7 @@ texture = ExtResource("1_ttefc")
 21:9/0 = 0
 21:9/0/terrain_set = 0
 21:9/0/terrain = 0
+21:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, 7, -8, 7)
 21:9/0/terrains_peering_bit/right_side = 0
 21:9/0/terrains_peering_bit/left_side = 0
 21:9/0/terrains_peering_bit/top_side = 0
@@ -1063,8 +1076,10 @@ texture = ExtResource("1_ttefc")
 6:10/0 = 0
 7:10/0 = 0
 8:10/0 = 0
+8:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.98268, -8, -6.98268, 8, -8, 8, -8, -8)
 9:10/0 = 0
 10:10/0 = 0
+10:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(7.15946, -8, 7.07107, 8, 8, 8, 8, -8)
 11:10/0 = 0
 12:10/0 = 0
 13:10/0 = 0
@@ -1072,6 +1087,7 @@ texture = ExtResource("1_ttefc")
 15:10/0 = 0
 15:10/0/terrain_set = 0
 15:10/0/terrain = 0
+15:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.00478, -8, -6.96058, 8, -8, 8, -8, -8)
 15:10/0/terrains_peering_bit/right_side = 0
 15:10/0/terrains_peering_bit/bottom_right_corner = 0
 15:10/0/terrains_peering_bit/bottom_side = 0
@@ -1091,6 +1107,7 @@ texture = ExtResource("1_ttefc")
 17:10/0 = 0
 17:10/0/terrain_set = 0
 17:10/0/terrain = 0
+17:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(7.00478, -8, 7.09316, 8, 8, 8, 8, -8)
 17:10/0/terrains_peering_bit/bottom_side = 0
 17:10/0/terrains_peering_bit/bottom_left_corner = 0
 17:10/0/terrains_peering_bit/left_side = 0
@@ -1099,6 +1116,7 @@ texture = ExtResource("1_ttefc")
 18:10/0 = 0
 18:10/0/terrain_set = 0
 18:10/0/terrain = 0
+18:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(7, -8, 8, -8, 8, 8, 7, 8)
 18:10/0/terrains_peering_bit/bottom_side = 0
 18:10/0/terrains_peering_bit/left_side = 0
 18:10/0/terrains_peering_bit/top_left_corner = 0
@@ -1106,6 +1124,7 @@ texture = ExtResource("1_ttefc")
 19:10/0 = 0
 19:10/0/terrain_set = 0
 19:10/0/terrain = 0
+19:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, -7, -8, -7, 8)
 19:10/0/terrains_peering_bit/right_side = 0
 19:10/0/terrains_peering_bit/bottom_side = 0
 19:10/0/terrains_peering_bit/top_side = 0
@@ -1113,6 +1132,7 @@ texture = ExtResource("1_ttefc")
 20:10/0 = 0
 20:10/0/terrain_set = 0
 20:10/0/terrain = 0
+20:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -7, 8, -7, 8, -8)
 20:10/0/terrains_peering_bit/right_side = 0
 20:10/0/terrains_peering_bit/bottom_side = 0
 20:10/0/terrains_peering_bit/bottom_left_corner = 0
@@ -1120,6 +1140,7 @@ texture = ExtResource("1_ttefc")
 21:10/0 = 0
 21:10/0/terrain_set = 0
 21:10/0/terrain = 0
+21:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -8, 8, -7, -8, -7)
 21:10/0/terrains_peering_bit/right_side = 0
 21:10/0/terrains_peering_bit/bottom_right_corner = 0
 21:10/0/terrains_peering_bit/bottom_side = 0
@@ -1214,11 +1235,15 @@ texture = ExtResource("1_ttefc")
 3:11/0 = 0
 4:11/0 = 0
 5:11/0 = 0
+5:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7.0625, 8, -6.9375, 8, -8, -8, -8)
 6:11/0 = 0
 7:11/0 = 0
 8:11/0 = 0
+8:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.89429, -8, -6.98268, 7.15946, 8, 7.07107, 8, 8, -8, 8, -8, -8)
 9:11/0 = 0
+9:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.98268, 8, 6.98268, 8, 8, -8, 8)
 10:11/0 = 0
+10:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(7, -8, 7.0625, 7.0625, -8, 7.125, -8, 8, 8, 8, 8, -8)
 11:11/0 = 0
 12:11/0 = 0
 13:11/0 = 0
@@ -1226,12 +1251,14 @@ texture = ExtResource("1_ttefc")
 15:11/0 = 0
 15:11/0/terrain_set = 0
 15:11/0/terrain = 0
+15:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -8, -7, 7, 8, 7, 8, 8, -8, 8, -8, -8)
 15:11/0/terrains_peering_bit/right_side = 0
 15:11/0/terrains_peering_bit/top_side = 0
 15:11/0/terrains_peering_bit/top_right_corner = 0
 16:11/0 = 0
 16:11/0/terrain_set = 0
 16:11/0/terrain = 0
+16:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, 7, -8, 7)
 16:11/0/terrains_peering_bit/right_side = 0
 16:11/0/terrains_peering_bit/left_side = 0
 16:11/0/terrains_peering_bit/top_left_corner = 0
@@ -1240,6 +1267,7 @@ texture = ExtResource("1_ttefc")
 17:11/0 = 0
 17:11/0/terrain_set = 0
 17:11/0/terrain = 0
+17:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 7, 7, 7, 7, -8)
 17:11/0/terrains_peering_bit/left_side = 0
 17:11/0/terrains_peering_bit/top_left_corner = 0
 17:11/0/terrains_peering_bit/top_side = 0
@@ -1369,11 +1397,13 @@ texture = ExtResource("1_ttefc")
 17:12/0 = 0
 17:12/0/terrain_set = 0
 17:12/0/terrain = 0
+17:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -7, -7, -7, -7, 8, -8, 8)
 17:12/0/terrains_peering_bit/right_side = 0
 17:12/0/terrains_peering_bit/bottom_side = 0
 18:12/0 = 0
 18:12/0/terrain_set = 0
 18:12/0/terrain = 0
+18:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, 7, 8, 7, -7, -8, -7)
 18:12/0/terrains_peering_bit/bottom_side = 0
 18:12/0/terrains_peering_bit/left_side = 0
 19:12/0 = 0
@@ -1539,11 +1569,13 @@ texture = ExtResource("1_ttefc")
 17:13/0 = 0
 17:13/0/terrain_set = 0
 17:13/0/terrain = 0
+17:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, 7, -7, 7, -7, -8)
 17:13/0/terrains_peering_bit/right_side = 0
 17:13/0/terrains_peering_bit/top_side = 0
 18:13/0 = 0
 18:13/0/terrain_set = 0
 18:13/0/terrain = 0
+18:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, -8, 8, -8, 7, -8, 7, 7, -8, 7)
 18:13/0/terrains_peering_bit/left_side = 0
 18:13/0/terrains_peering_bit/top_side = 0
 19:13/0 = 0
@@ -10266,9 +10298,22 @@ sources/0 = SubResource("TileSetAtlasSource_37a8r")
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD/////AAAPAAkAAAD//wAAAAAIAAsAAAAAAP//AAAQAAkAAAABAP//AAAJAAkAAAACAP//AAAQAAkAAAAFAP//AAAJAAkAAAAGAP//AAAQAAkAAAAHAP//AAAJAAkAAAAIAP//AAAQAAkAAAAMAP//AAAQAAkAAAALAP//AAAQAAkAAAANAP//AAAQAAkAAAAOAP//AAAJAAkAAAARAP//AAAQAAkAAAASAP//AAAJAAkAAAATAP//AAAQAAkAAAAUAP//AAAQAAkAAAAAAAAAAAAJAAkAADABAAAAAAAQAAsAAAACAAAAAAAQAAsAAAAFAAAAAAAQAAsAAAAGAAAAAAAJAAkAADAHAAAAAAAJAAkAADAIAAAAAAAQAAsAAAALAAAAAAAQAAsAAAAMAAAAAAAJAAkAADANAAAAAAAQAAsAAAAOAAAAAAAQAAsAAAARAAAAAAAQAAsAAAASAAAAAAAJAAkAADATAAAAAAAQAAsAAAAUAAAAAAAJAAkAADADAP//AAAQAAoAAAAEAP//AAAQAAoAAAAEAAAAAAAQAAoAAAADAAAAAAAQAAoAAAAJAP//AAAJAAoAAAAKAP//AAAQAAoAAAAKAAAAAAAGAAsAAAAJAAAAAAAQAAoAAAAPAP//AAAGAAsAAAAQAP//AAAQAAoAAAAQAAAAAAAQAAoAAAAPAAAAAAAQAAoAAAA=")
+tile_map_data = PackedByteArray("AAD/////AAAPAAkAAAD//wAAAAAIAAsAAAAAAP//AAAQAAkAAAABAP//AAAJAAkAAAACAP//AAAQAAkAAAAFAP//AAAJAAkAAAAGAP//AAAQAAkAAAAHAP//AAAJAAkAAAAIAP//AAAQAAkAAAAMAP//AAAQAAkAAAALAP//AAAQAAkAAAANAP//AAAQAAkAAAAOAP//AAAJAAkAAAARAP//AAAQAAkAAAASAP//AAAJAAkAAAATAP//AAAQAAkAAAAUAP//AAAQAAkAAAAAAAAAAAAJAAkAADABAAAAAAAQAAsAAAACAAAAAAAQAAsAAAAFAAAAAAAQAAsAAAAGAAAAAAAJAAkAADAHAAAAAAAJAAkAADAIAAAAAAAQAAsAAAALAAAAAAAQAAsAAAAMAAAAAAAJAAkAADANAAAAAAAQAAsAAAAOAAAAAAAQAAsAAAARAAAAAAAQAAsAAAASAAAAAAAJAAkAADATAAAAAAAQAAsAAAAUAAAAAAAJAAkAADADAP//AAAQAAoAAAAEAP//AAAQAAkAAAAEAAAAAAAQAAsAAAADAAAAAAAJAAsAAAAJAP//AAAJAAkAAAAKAP//AAAQAAkAAAAKAAAAAAAJAAsAAAAJAAAAAAAQAAsAAAAPAP//AAAQAAkAAAAQAP//AAAQAAkAAAAQAAAAAAAQAAsAAAAPAAAAAAAJAAsAAAA=")
 tile_set = SubResource("TileSet_75hwq")
 
 [node name="SceneDoor" parent="." instance=ExtResource("2_ks3wh")]
-position = Vector2(64, -24)
+position = Vector2(56, -24)
 destination = "kaden-puzzle1"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_3axdj")]
+
+[node name="GreySprite" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(2.12364, 2.24516)
+texture = ExtResource("4_cnhci")
+
+[node name="GameUI" parent="CharacterBody2D" instance=ExtResource("4_2mcoe")]
+position = Vector2(-576, -328)
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+unique_name_in_owner = true
+one_shot = true
