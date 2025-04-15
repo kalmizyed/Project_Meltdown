@@ -12,6 +12,7 @@ func _switch_flipped(name, state) -> void:
 	handle_open()
 
 func handle_open() -> void:
+	AudioController.play_door()
 	if isOpen:
 		$AnimatedSprite2D.play_backwards()
 		isOpen = false

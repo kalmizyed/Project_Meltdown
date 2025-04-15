@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 
 func _on_interactable_interacted() -> void:
 	$AnimatedSprite2D.play()
+	AudioController.play_door()
 
 
 func _on_animated_sprite_2d_animation_finished() -> void:

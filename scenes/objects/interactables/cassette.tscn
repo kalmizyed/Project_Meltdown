@@ -19,6 +19,7 @@ position = Vector2(-5.5625, -3.75)
 shape = SubResource("RectangleShape2D_88bgf")
 
 [node name="CassetteInteractable" type="Area2D" parent="."]
+collision_mask = 2
 script = ExtResource("2_7yark")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CassetteInteractable"]
