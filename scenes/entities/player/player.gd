@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var animated_sprite = $Sprite2D
 @onready var aniTree : AnimationTree = $AnimationTree
 var direction: Vector2 = Vector2.ZERO
-const SPEED : int = 500
+const SPEED : int = 100
 
 func _ready():
 	aniTree.active = true
