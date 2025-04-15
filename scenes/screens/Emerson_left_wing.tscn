@@ -10316,6 +10316,6 @@ texture = ExtResource("4_cnhci")
 position = Vector2(-601.94, -328)
 
 [node name="Cassette" parent="." instance=ExtResource("6_bbaui")]
-position = Vector2(330, 2)
+position = Vector2(57, 0)
 scale = Vector2(0.25, 0.25)
 cinematic_name = "supervisor_murders_robbie"
