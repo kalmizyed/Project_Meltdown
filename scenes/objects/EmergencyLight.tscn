@@ -24,12 +24,13 @@ polygon = PackedVector2Array(-9, 30, -24, 28, -35, 26, -43, 23, -44, 30, -43, 40
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(1, 0, 0, 1)
-energy = 16.0
+energy = 1.77
 shadow_enabled = true
 shadow_color = Color(0.121569, 0, 0, 0.792157)
 shadow_filter = 1
 shadow_filter_smooth = 8.0
 texture = ExtResource("2_o1tes")
+texture_scale = 3.38
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_iayby")
