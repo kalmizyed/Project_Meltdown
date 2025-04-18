@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2otbalk5awct"]
+
+[ext_resource type="Texture2D" uid="uid://dksnmbmkbcpbi" path="res://assets/sprites/objects/Office_Plant.png" id="1_d0c4s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ohkw"]
+radius = 77.0
+height = 178.0
+
+[node name="Office_Plant" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d0c4s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-14, 136)
+shape = SubResource("CapsuleShape2D_0ohkw")
