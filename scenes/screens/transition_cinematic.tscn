@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://wf4gqdb2nukf"]
+[gd_scene load_steps=4 format=3 uid="uid://wf4gqdb2nukf"]
 
 [ext_resource type="Script" path="res://scripts/transition_cinematic.gd" id="1_4hb22"]
 [ext_resource type="Texture2D" uid="uid://cq8pblnjct5nd" path="res://assets/black_screen_for_cinematic.jpg" id="1_mqkuy"]
+[ext_resource type="VideoStream" path="res://assets/cinematics/robbie_cant_find_worker_subtitles.ogv" id="3_0vk1c"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4hb22")
@@ -25,3 +26,14 @@ offset_top = 527.0
 offset_right = 180.0
 offset_bottom = 567.0
 text = "0:00/1:05"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer"]
+offset_left = 88.0
+offset_top = -112.0
+offset_right = 2936.0
+offset_bottom = 1184.0
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("3_0vk1c")
+autoplay = true
