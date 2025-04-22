@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0ol113gmconv"]
+
+[ext_resource type="Texture2D" uid="uid://b5igpt0k1oh4b" path="res://assets/sprites/objects/Locker-1.png" id="1_nnfcr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4xml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5r54"]
+size = Vector2(160, 303)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_nnfcr")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_m4xml")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 9.5)
+shape = SubResource("RectangleShape2D_n5r54")

@@ -13,4 +13,4 @@ func _ready() -> void:
 
 func _interact() -> void:
 	item_collected.emit(item_node)
-	item_node.queue_free()
+	item_node.get_parent().remove_child(item_node)
