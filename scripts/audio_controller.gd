@@ -49,11 +49,10 @@ func play_cinematic(cinematic_name : String):
 	var cinematic_path := "res://assets/cinematics/%s.mp3" % cinematic_name
 	$CinematicPlayer.stream = load_mp3(cinematic_path)
 	if not mute:
-		mute_music = true
 		$Music.stop()
 		$CinematicPlayer.play()
-		mute_music = false
 
 
 func _on_cinematic_player_finished():
+	await get_tree().create_timer(1.0).timeout
 	$Music.play()

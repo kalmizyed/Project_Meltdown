@@ -24,7 +24,7 @@ func sec_to_time(secs: int) -> String:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time_taken += delta
-	if(time_taken<=END_TIME):
+	if(time_taken<END_TIME):
 		$ProgressBar.value = time_taken
 		$RichTextLabel.text = sec_to_time(time_taken) + "/1:05"
 	#else:

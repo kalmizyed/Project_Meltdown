@@ -14,7 +14,7 @@ script = ExtResource("1_031uf")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_bqb4c")
-volume_db = -2.0
+volume_db = -4.5
 
 [node name="Door" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_bxl2e")
