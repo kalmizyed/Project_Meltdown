@@ -33,8 +33,6 @@ func _physics_process(delta):
 		direction.y=0
 	elif Input.is_action_just_pressed("up") || Input.is_action_just_pressed("down"):
 		direction.x=0
-	else:
-		direction = Vector2.ZERO
 
 	velocity = direction * SPEED
 	move_and_slide()
