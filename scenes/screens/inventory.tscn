@@ -1,6 +1,13 @@
-[gd_scene format=3 uid="uid://bjjney4xlm8yg"]
+[gd_scene load_steps=6 format=3 uid="uid://bjjney4xlm8yg"]
+
+[ext_resource type="Script" path="res://scenes/screens/inventory.gd" id="1_8ib0x"]
+[ext_resource type="Texture2D" uid="uid://bop6mo318gc1g" path="res://assets/sprites/UI/diary_small.bmp" id="2_dkov2"]
+[ext_resource type="Script" path="res://scenes/screens/text_1.gd" id="2_ybsom"]
+[ext_resource type="Script" path="res://scenes/screens/text_2.gd" id="3_heno4"]
+[ext_resource type="Texture2D" uid="uid://edglpmtpo0px" path="res://assets/sprites/objects/Barrel_Sprite.png" id="5_drqvh"]
 
 [node name="Inventory" type="Node2D"]
+script = ExtResource("1_8ib0x")
 
 [node name="X" type="Button" parent="."]
 visible = false
@@ -10,11 +17,30 @@ offset_right = 114.0
 offset_bottom = 150.0
 text = "X"
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+
 [node name="Text1" type="Button" parent="."]
-offset_left = 165.0
-offset_top = 186.0
-offset_right = 410.0
+offset_left = 388.0
+offset_top = 310.0
+offset_right = 503.0
 offset_bottom = 391.0
 text = "LoreText1"
+icon = ExtResource("2_dkov2")
+script = ExtResource("2_ybsom")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Text2" type="Button" parent="."]
+offset_left = 536.0
+offset_top = 311.0
+offset_right = 647.0
+offset_bottom = 384.0
+text = "Text2"
+script = ExtResource("3_heno4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_drqvh")
+
+[connection signal="pressed" from="Text1" to="." method="_on_text_1_pressed"]
+[connection signal="pressed" from="Text2" to="." method="_on_text_2_pressed"]
