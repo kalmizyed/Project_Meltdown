@@ -12,5 +12,6 @@ func _ready() -> void:
 	if not item_node: item_node = self.get_parent()
 
 func _interact() -> void:
+	print("Item collected:", item_node.name)
 	item_collected.emit(item_node)
 	item_node.get_parent().remove_child(item_node)
