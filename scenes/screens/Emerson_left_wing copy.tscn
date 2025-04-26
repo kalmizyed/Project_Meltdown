@@ -1,15 +1,16 @@
-[gd_scene load_steps=13 format=4 uid="uid://dcfv5io1xfwva"]
+[gd_scene load_steps=13 format=4 uid="uid://b8e6om7xyviyv"]
 
-[ext_resource type="Texture2D" uid="uid://ddfijiwnq7laj" path="res://assets/sprites/Tilemap/tileset_small.bmp" id="1_7nmii"]
-[ext_resource type="Texture2D" uid="uid://dgb0xqhqvs3ic" path="res://assets/sprites/Tilemap/tileset_small_wall.bmp" id="2_2767t"]
+[ext_resource type="Texture2D" uid="uid://ddfijiwnq7laj" path="res://assets/sprites/Tilemap/tileset_small.bmp" id="1_gtiu8"]
+[ext_resource type="Texture2D" uid="uid://dgb0xqhqvs3ic" path="res://assets/sprites/Tilemap/tileset_small_wall.bmp" id="2_3mucv"]
 [ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="2_ks3wh"]
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_uto2h"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="4_2mcoe"]
+[ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="4_cnhci"]
 [ext_resource type="PackedScene" uid="uid://cmb3dpj7pwc7k" path="res://scenes/objects/interactables/cassette.tscn" id="6_bbaui"]
 [ext_resource type="PackedScene" uid="uid://b01ehmvboywhe" path="res://scenes/objects/interactables/diary.tscn" id="7_sml48"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ialb4"]
-texture = ExtResource("1_7nmii")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01f1p"]
+texture = ExtResource("1_gtiu8")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -427,17 +428,17 @@ texture = ExtResource("1_7nmii")
 19:6/0 = 0
 20:6/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_oq6o7"]
+[sub_resource type="TileSet" id="TileSet_g8m4h"]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 terrain_set_0/terrain_1/name = "Terrain 1"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_ialb4")
+sources/0 = SubResource("TileSetAtlasSource_01f1p")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlcl1"]
-texture = ExtResource("2_2767t")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmyu0"]
+texture = ExtResource("2_3mucv")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -624,29 +625,35 @@ texture = ExtResource("2_2767t")
 19:6/0 = 0
 20:6/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_efy5d"]
+[sub_resource type="TileSet" id="TileSet_75hwq"]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 2
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/1 = SubResource("TileSetAtlasSource_xlcl1")
+sources/1 = SubResource("TileSetAtlasSource_hmyu0")
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD/////AAAKAAAAAAD//wAAAAAKAAIAAAAAAAAAAAAUAAMAAAABAAAAAAAUAAMAAAACAAAAAAATAAMAAAADAAAAAAALAAIAAAADAP//AAAUAAQAAAACAP//AAATAAQAAAABAP//AAATAAQAAAAAAP//AAATAAQAAAAEAP//AAALAAAAAAAFAP//AAAUAAQAAAAGAP//AAAUAAQAAAAHAP//AAATAAQAAAAIAP//AAAMAAAAAAAEAAAAAAAUAAMAAAAFAAAAAAAUAAMAAAAGAAAAAAALAAIAAAAHAAAAAAATAAMAAAAIAAAAAAAMAAIAAAA=")
-tile_set = SubResource("TileSet_oq6o7")
+tile_set = SubResource("TileSet_g8m4h")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAACAP7/AQAPAAUAAAABAP7/AQAIAAYAAAAAAP7/AQAIAAYAAAD///7/AQAIAAYAAAD+//7/AQAKAAUAAAD+////AQAJAAYAAAD+/wAAAQAJAAYAAAD+/wEAAQAKAAYAAAD//wEAAQAIAAYAAAAAAAEAAQAIAAYAAAABAAEAAQAIAAYAAAACAAEAAQAIAAYAAAADAAEAAQAIAAYAAAAEAAEAAQAIAAYAAAAFAAEAAQAIAAYAAAAGAAEAAQAIAAYAAAAHAAEAAQAIAAYAAAAIAAEAAQAIAAYAAAAJAAEAAQALAAYAAAAJAAAAAQAJAAYAAAAJAP//AQAJAAYAAAAJAP7/AQALAAUAAAAIAP7/AQAIAAYAAAAHAP7/AQAIAAYAAAAGAP7/AQAIAAYAAAAFAP7/AQAIAAYAAAAEAP7/AQAPAAYAAAA=")
-tile_set = SubResource("TileSet_efy5d")
+tile_set = SubResource("TileSet_75hwq")
 
 [node name="SceneDoor" parent="." instance=ExtResource("2_ks3wh")]
 position = Vector2(56, -24)
 destination = "kaden-puzzle1"
 
 [node name="player" parent="." instance=ExtResource("2_uto2h")]
+collision_mask = 5
+
+[node name="GreySprite" type="Sprite2D" parent="player"]
+position = Vector2(-24, -502)
+scale = Vector2(2.12364, 2.24516)
+texture = ExtResource("4_cnhci")
 
 [node name="GameUI" parent="player" instance=ExtResource("4_2mcoe")]
 position = Vector2(-601.94, -328)
