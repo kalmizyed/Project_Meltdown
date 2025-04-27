@@ -1,15 +1,16 @@
 extends Node2D
 
 # TODO: balance audio volume
-# TODO: implement locker sfx
-# TODO: implement switch sfx
+# TODO: implement locker sfx?
 # TODO: implement light sfx?
 # TODO: implement locked door sfx
 # TODO: implement fire sfx
 
-@export var mute_sfx: bool = false
-@export var mute_music: bool = false
+@export var mute_sfx: bool = false # Mutes all sound effects
+@export var mute_music: bool = false # Mutes all music
+@export var mute_cinematics: bool = false # Mutes cinematics played through audio controller
 var last_num = 1 # stores the last played numpad value, default 1
+var music_playing # Tracks the song currently being played
 
 func _ready():
 	play_main_menu()
@@ -25,16 +26,19 @@ func load_mp3(path):
 func play_main_menu():
 	if not mute_music:
 		$MainMenu.play()
+		music_playing = "main_menu"
 
 # Plays the level 1 music
 func play_level1():
 	if not mute_music:
 		$Level1.play()
+		music_playing = "level1"
 
 # Plays the credits music
 func play_credits():
 	if not mute_music:
 		$Credits.play()
+		music_playing = "credits"
 
 # Plays the door opening sound effect
 func play_door() -> void:
@@ -78,10 +82,15 @@ func play_book_pickup() -> void:
 		$Book.play()
 
 func play_cinematic(cinematic_name : String):
+	var music_playing
 	var cinematic_path := "res://assets/cinematics/%s.mp3" % cinematic_name
 	$CinematicPlayer.stream = load_mp3(cinematic_path)
-	if not mute_sfx:
-		$Music.stop()
+	if not mute_cinematics:
+		$MainMenu.stop()
+		$Level1.stop()
+		$Credits.stop()
+		mute_music = true
+		mute_sfx = true
 		$CinematicPlayer.play()
 
 # Chooses a random int value that is not the last played numpad sound effect number
@@ -107,6 +116,12 @@ func play_misc_pickup():
 	if not mute_sfx:
 		$MiscPickup.play()
 
+# Restarts music after a cinematic finishes
 func _on_cinematic_player_finished():
 	await get_tree().create_timer(1.0).timeout
-	$Music.play()
+	if(music_playing=="main_menu"):
+		play_main_menu()
+	elif(music_playing=="level1"):
+		play_level1()
+	else:
+		play_credits()

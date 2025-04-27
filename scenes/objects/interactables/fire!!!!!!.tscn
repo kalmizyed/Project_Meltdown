@@ -1,8 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj8unk4b2uswf"]
+[gd_scene load_steps=8 format=3 uid="uid://dj8unk4b2uswf"]
 
 [ext_resource type="Texture2D" uid="uid://cf3v7afkkd2i2" path="res://assets/sprites/objects/Fire-1.png" id="1_5a7q5"]
 [ext_resource type="Texture2D" uid="uid://dcprbhfqwj56f" path="res://assets/sprites/objects/Fire-2.png" id="2_vx27w"]
 [ext_resource type="Texture2D" uid="uid://csmu8vm50ichc" path="res://assets/sprites/objects/Light_effect.png" id="3_bmbuk"]
+[ext_resource type="AudioStream" uid="uid://da8pnt6clomvk" path="res://assets/sfx/fire.mp3" id="4_lbt14"]
+
+[sub_resource type="GDScript" id="GDScript_66lgp"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7jo1h"]
 animations = [{
@@ -24,6 +40,7 @@ height = 335.959
 
 [node name="Fire!!!!!!" type="StaticBody2D"]
 scale = Vector2(0.5, 0.5)
+script = SubResource("GDScript_66lgp")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(1, 0.836177, 0.525379, 1)
@@ -48,3 +65,8 @@ frame_progress = 0.156286
 position = Vector2(-4, 102)
 rotation = -1.55509
 shape = SubResource("CapsuleShape2D_dyw28")
+
+[node name="Crackling" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lbt14")
+autoplay = true
+parameters/looping = false
