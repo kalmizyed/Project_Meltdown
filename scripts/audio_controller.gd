@@ -2,7 +2,7 @@ extends Node2D
 
 # TODO: balance audio volume
 # TODO: implement locker sfx?
-# TODO: implement light sfx?
+# TODO: implement bag open/close
 # TODO: implement locked door sfx
 
 @export var mute_sfx: bool = false # Mutes all sound effects
@@ -24,18 +24,24 @@ func load_mp3(path):
 # Plays the main menu music
 func play_main_menu():
 	if not mute_music:
+		$Level1.stop()
+		$Credits.stop()
 		$MainMenu.play()
 		music_playing = "main_menu"
 
 # Plays the level 1 music
 func play_level1():
 	if not mute_music:
+		$MainMenu.stop()
+		$Credits.stop()
 		$Level1.play()
 		music_playing = "level1"
 
 # Plays the credits music
 func play_credits():
 	if not mute_music:
+		$Level1.stop()
+		$MainMenu.stop()
 		$Credits.play()
 		music_playing = "credits"
 
@@ -69,7 +75,7 @@ func play_bag_close():
 	var sfx = randi_range(0, 1)
 	
 	if sfx==1:
-		$BagClsoe.stream = load_mp3("res://assets/sfx/bag_close_1.mp3")
+		$BagClose.stream = load_mp3("res://assets/sfx/bag_close_1.mp3")
 	else:
 		$BagClose.stream = load_mp3("res://assets/sfx/bag_close_2.mp3")
 	

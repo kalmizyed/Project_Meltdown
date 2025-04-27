@@ -32,3 +32,4 @@ func _on_inventory_pressed() -> void:
 
 func _on_start_pressed() -> void:
 	load_level("Emerson_left_wing") # Replace with function body.
+	AudioController.play_level1()

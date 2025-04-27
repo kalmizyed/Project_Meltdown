@@ -33,13 +33,16 @@ func add_level(level_name : String):
 
 func _on_exit_pressed() -> void:
 	load_level("title_screen") # Replace with function body.
+	AudioController.play_main_menu()
 
 
 func _on_inventory_pressed() -> void:
 	add_level("inventory") # Replace with function body.
+	AudioController.play_bag_open()
 	
 
 
 func _on_x_pressed() -> void:
 	unload_level()
 	exit_button.visible = false
+	AudioController.play_bag_close()

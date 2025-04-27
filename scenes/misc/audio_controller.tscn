@@ -14,20 +14,27 @@ data = PackedByteArray("//uQxAAAlqm0vgek3sL6t5+lhg8pTyhSyMVaoUaGKdtfOmd5D1aZwZ3k
 
 [node name="AudioController" type="Node2D"]
 script = ExtResource("1_031uf")
-mute_music = true
+
+[node name="Credits" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lo3tp")
+parameters/looping = true
 
 [node name="Level1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_coo1i")
+volume_db = -15.0
+parameters/looping = true
 
 [node name="MainMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_fry63")
 volume_db = -4.5
+parameters/looping = true
 
-[node name="Credits" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_lo3tp")
+[node name="BagClose" type="AudioStreamPlayer" parent="."]
+volume_db = 6.0
 
 [node name="BagOpen" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMP3_mx3md")
+volume_db = 7.0
 
 [node name="Book" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_2amb3")
@@ -42,6 +49,10 @@ stream = ExtResource("1_bxl2e")
 stream = ExtResource("6_2jvyk")
 volume_db = 7.0
 
+[node name="MiscPickup" type="AudioStreamPlayer" parent="."]
+
+[node name="NumPad" type="AudioStreamPlayer" parent="."]
+
 [node name="Paper" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_013m7")
 volume_db = 10.0
@@ -49,11 +60,5 @@ volume_db = 10.0
 [node name="Paper2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_013m7")
 volume_db = 10.0
-
-[node name="NumPad" type="AudioStreamPlayer" parent="."]
-
-[node name="BagClose" type="AudioStreamPlayer" parent="."]
-
-[node name="MiscPickup" type="AudioStreamPlayer" parent="."]
 
 [connection signal="finished" from="CinematicPlayer" to="." method="_on_cinematic_player_finished"]
