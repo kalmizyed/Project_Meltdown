@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ohmcb444fq2p"]
+[gd_scene load_steps=10 format=3 uid="uid://ohmcb444fq2p"]
 
 [ext_resource type="Texture2D" uid="uid://b06rhtapypevx" path="res://assets/sprites/objects/Door-1.png" id="1_bo66k"]
 [ext_resource type="Script" path="res://scripts/objects/door.gd" id="1_tdbkg"]
 [ext_resource type="Texture2D" uid="uid://kykwgbdoiqrl" path="res://assets/sprites/objects/Door-2.png" id="2_sm4cs"]
 [ext_resource type="Texture2D" uid="uid://iq8a8wtwbp0q" path="res://assets/sprites/objects/Door-3.png" id="3_koplm"]
 [ext_resource type="Script" path="res://scripts/interactables/interactable.gd" id="5_jih0g"]
+[ext_resource type="AudioStream" uid="uid://uaulfc2vvb43" path="res://assets/sfx/locked_door.mp3" id="6_yd0mh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_by3iv"]
 animations = [{
@@ -50,5 +51,9 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_jibad")
+
+[node name="DoorLocked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_yd0mh")
+volume_db = 2.0
 
 [connection signal="interacted" from="Interactable" to="." method="_on_interactable_interacted"]

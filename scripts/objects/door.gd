@@ -42,6 +42,7 @@ func handle_open() -> void:
 		if passes_requirements():
 			open_door()
 		else:
+			$DoorLocked.play()
 			close_door()
 	else:
 		if isOpen:
