@@ -72,4 +72,4 @@ volume_db = -4.0
 autoplay = true
 max_distance = 250.0
 attenuation = 2.0
-parameters/looping = false
+parameters/looping = true

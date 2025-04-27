@@ -4,7 +4,6 @@ extends Node2D
 # TODO: implement locker sfx?
 # TODO: implement light sfx?
 # TODO: implement locked door sfx
-# TODO: implement fire sfx
 
 @export var mute_sfx: bool = false # Mutes all sound effects
 @export var mute_music: bool = false # Mutes all music

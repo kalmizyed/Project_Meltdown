@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://dcfv5io1xfwva"]
+[gd_scene load_steps=10 format=4 uid="uid://dcfv5io1xfwva"]
 
 [ext_resource type="Texture2D" uid="uid://dbmvmt58dohu6" path="res://assets/sprites/Tilemap/fake files.bmp" id="1_ttefc"]
 [ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="2_ks3wh"]
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_uto2h"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="4_2mcoe"]
 [ext_resource type="PackedScene" uid="uid://cmb3dpj7pwc7k" path="res://scenes/objects/interactables/cassette.tscn" id="6_bbaui"]
+[ext_resource type="PackedScene" uid="uid://1kj01bmv1h8j" path="res://scenes/objects/EmergencyLight.tscn" id="7_ntanl"]
 [ext_resource type="PackedScene" uid="uid://b01ehmvboywhe" path="res://scenes/objects/interactables/diary.tscn" id="7_sml48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5euh5"]
@@ -10321,3 +10322,6 @@ position = Vector2(26, 7)
 
 [node name="Diary2" parent="." instance=ExtResource("7_sml48")]
 position = Vector2(27, -8)
+
+[node name="Node2D" parent="." instance=ExtResource("7_ntanl")]
+position = Vector2(167, -8)

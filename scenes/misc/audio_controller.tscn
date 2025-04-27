@@ -14,6 +14,7 @@ data = PackedByteArray("//uQxAAAlqm0vgek3sL6t5+lhg8pTyhSyMVaoUaGKdtfOmd5D1aZwZ3k
 
 [node name="AudioController" type="Node2D"]
 script = ExtResource("1_031uf")
+mute_music = true
 
 [node name="Level1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_coo1i")
