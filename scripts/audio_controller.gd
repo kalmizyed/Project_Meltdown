@@ -77,10 +77,12 @@ func play_bag_close():
 	if not mute_sfx:
 		$BagClose.play()
 
+# Plays the book pickup sound effect
 func play_book_pickup() -> void:
 	if not mute_sfx:
 		$Book.play()
 
+# Plays a cinematic given its name
 func play_cinematic(cinematic_name : String):
 	var music_playing
 	var cinematic_path := "res://assets/cinematics/%s.mp3" % cinematic_name
@@ -118,7 +120,9 @@ func play_misc_pickup():
 
 # Restarts music after a cinematic finishes
 func _on_cinematic_player_finished():
+	mute_sfx = false
 	await get_tree().create_timer(1.0).timeout
+	mute_music = false
 	if(music_playing=="main_menu"):
 		play_main_menu()
 	elif(music_playing=="level1"):

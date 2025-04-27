@@ -33,8 +33,15 @@ func _physics_process(delta):
 		direction.y=0
 	elif Input.is_action_just_pressed("up") || Input.is_action_just_pressed("down"):
 		direction.x=0
-
+	
 	velocity = direction * SPEED
+	
+	# Plays footsteps if the player is moving
+	if(velocity.length()!=0):
+		if($Timer.time_left<=0):
+			AudioController.play_footsteps_with_reverb()
+			$Timer.start(0.2)
+	
 	move_and_slide()
 
 
