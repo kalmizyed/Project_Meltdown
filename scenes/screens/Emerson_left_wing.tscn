@@ -1,13 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://dcfv5io1xfwva"]
+[gd_scene load_steps=9 format=4 uid="uid://dcfv5io1xfwva"]
 
 [ext_resource type="Texture2D" uid="uid://dbmvmt58dohu6" path="res://assets/sprites/Tilemap/fake files.bmp" id="1_ttefc"]
 [ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="2_ks3wh"]
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_uto2h"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="4_2mcoe"]
-[ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="4_cnhci"]
 [ext_resource type="PackedScene" uid="uid://cmb3dpj7pwc7k" path="res://scenes/objects/interactables/cassette.tscn" id="6_bbaui"]
 [ext_resource type="PackedScene" uid="uid://b01ehmvboywhe" path="res://scenes/objects/interactables/diary.tscn" id="7_sml48"]
-[ext_resource type="PackedScene" uid="uid://dj8unk4b2uswf" path="res://scenes/objects/interactables/fire!!!!!!.tscn" id="8_ecgw6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5euh5"]
 texture = ExtResource("1_ttefc")
@@ -10310,11 +10308,6 @@ destination = "kaden-puzzle1"
 
 [node name="player" parent="." instance=ExtResource("2_uto2h")]
 
-[node name="GreySprite" type="Sprite2D" parent="player"]
-position = Vector2(-24, -502)
-scale = Vector2(2.12364, 2.24516)
-texture = ExtResource("4_cnhci")
-
 [node name="GameUI" parent="player" instance=ExtResource("4_2mcoe")]
 position = Vector2(-601.94, -328)
 
@@ -10328,7 +10321,3 @@ position = Vector2(26, 7)
 
 [node name="Diary2" parent="." instance=ExtResource("7_sml48")]
 position = Vector2(27, -8)
-
-[node name="Fire!!!!!!" parent="." instance=ExtResource("8_ecgw6")]
-position = Vector2(323, -7)
-scale = Vector2(0.1, 0.1)
