@@ -13,5 +13,6 @@ func _ready() -> void:
 
 func _interact() -> void:
 	print("Item collected:", item_node.name)
+	AudioController.play_misc_pickup()
 	item_collected.emit(item_node)
 	item_node.get_parent().remove_child(item_node)
