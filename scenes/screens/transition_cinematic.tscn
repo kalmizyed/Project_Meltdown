@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/transition_cinematic.gd" id="1_4hb22"]
 [ext_resource type="Texture2D" uid="uid://cq8pblnjct5nd" path="res://assets/black_screen_for_cinematic.jpg" id="1_mqkuy"]
-[ext_resource type="VideoStream" path="res://assets/cinematics/supervisor_murders_robbie_1.ogv" id="3_t7iox"]
+[ext_resource type="VideoStream" path="res://assets/cinematics/supervisor_murders_robbie_1.ogv" id="3_s54kh"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4hb22")
@@ -35,5 +35,5 @@ offset_top = -112.0
 offset_right = 2936.0
 offset_bottom = 1184.0
 scale = Vector2(0.5, 0.5)
-stream = ExtResource("3_t7iox")
+stream = ExtResource("3_s54kh")
 autoplay = true
