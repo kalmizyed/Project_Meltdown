@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bu6s41tcuqskh"]
+[gd_scene load_steps=10 format=4 uid="uid://bu6s41tcuqskh"]
 
 [ext_resource type="PackedScene" uid="uid://ohmcb444fq2p" path="res://scenes/objects/interactables/door.tscn" id="2_80pxs"]
 [ext_resource type="PackedScene" uid="uid://d33iws2i65j2b" path="res://scenes/objects/interactables/lever.tscn" id="3_yg47d"]
 [ext_resource type="Texture2D" uid="uid://dgb0xqhqvs3ic" path="res://assets/sprites/Tilemap/tileset_small_wall.bmp" id="4_iwrtc"]
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="5_5urk2"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="5_v6bg1"]
+[ext_resource type="PackedScene" uid="uid://cmb3dpj7pwc7k" path="res://scenes/objects/interactables/cassette.tscn" id="7_2rl5y"]
 [ext_resource type="PackedScene" uid="uid://c7iaoiiugjnue" path="res://scenes/objects/interactables/scene_door.tscn" id="8_yos32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ko10n"]
@@ -395,3 +396,8 @@ position = Vector2(10, 37)
 
 [node name="GameUI" parent="player" instance=ExtResource("5_v6bg1")]
 position = Vector2(-582, -328)
+
+[node name="Cassette" parent="." instance=ExtResource("7_2rl5y")]
+position = Vector2(211, -140)
+rotation = -1.77675
+scale = Vector2(0.3, 0.3)
