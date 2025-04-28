@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dj8unk4b2uswf" path="res://scenes/objects/interactables/fire!!!!!!.tscn" id="7_6dkch"]
 [ext_resource type="PackedScene" uid="uid://b01ehmvboywhe" path="res://scenes/objects/interactables/diary.tscn" id="7_sml48"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlanl"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpdq8"]
 texture = ExtResource("1_7nmii")
 0:0/0 = 0
 1:0/0 = 0
@@ -519,9 +519,9 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 terrain_set_0/terrain_1/name = "Terrain 1"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_dlanl")
+sources/0 = SubResource("TileSetAtlasSource_jpdq8")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yi177"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vujnx"]
 texture = ExtResource("2_2767t")
 0:0/0 = 0
 1:0/0 = 0
@@ -827,7 +827,7 @@ physics_layer_0/collision_mask = 3
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/1 = SubResource("TileSetAtlasSource_yi177")
+sources/1 = SubResource("TileSetAtlasSource_vujnx")
 
 [node name="Node2D" type="Node2D"]
 
@@ -857,7 +857,6 @@ position = Vector2(27, -8)
 [node name="Fire!!!!!!" parent="." instance=ExtResource("7_6dkch")]
 position = Vector2(224, -3)
 scale = Vector2(0.1, 0.1)
-respawn_point = "Emerson_left_wing"
 
 [node name="SceneDoor2" parent="." instance=ExtResource("2_ks3wh")]
 position = Vector2(409, -2)
