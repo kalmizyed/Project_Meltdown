@@ -85,3 +85,5 @@ func _process(delta: float) -> void:
 func _on_interactable_interacted() -> void:
 	if canOpen and passes_item_requirements():
 		handle_open()
+	else:
+		$DoorLocked.play()

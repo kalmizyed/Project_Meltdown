@@ -2,8 +2,7 @@ extends Node2D
 
 # TODO: balance audio volume
 # TODO: implement locker sfx?
-# TODO: implement bag open/close
-# TODO: implement locked door sfx
+# TODO: implement paper/dairy sfx
 
 @export var mute_sfx: bool = false # Mutes all sound effects
 @export var mute_music: bool = false # Mutes all music
@@ -21,7 +20,11 @@ func load_mp3(path):
 	sound.data = file.get_buffer(file.get_length())
 	return sound
 
-# Plays the main menu music
+## Stops the main menu music
+func stop_main_menu():
+	$MainMenu.stop()
+
+## Plays the main menu music
 func play_main_menu():
 	if not mute_music:
 		$Level1.stop()
@@ -29,7 +32,7 @@ func play_main_menu():
 		$MainMenu.play()
 		music_playing = "main_menu"
 
-# Plays the level 1 music
+## Plays the level 1 music
 func play_level1():
 	if not mute_music:
 		$MainMenu.stop()
@@ -37,7 +40,7 @@ func play_level1():
 		$Level1.play()
 		music_playing = "level1"
 
-# Plays the credits music
+## Plays the credits music
 func play_credits():
 	if not mute_music:
 		$Level1.stop()
@@ -45,12 +48,12 @@ func play_credits():
 		$Credits.play()
 		music_playing = "credits"
 
-# Plays the door opening sound effect
+## Plays the door opening sound effect
 func play_door() -> void:
 	if not mute_sfx:
 		$Door.play()
 
-# Play paper pickup sound effect, random choice of 2 options
+## Play paper pickup sound effect, random choice of 2 options
 func play_paper_pickup() -> void:
 	if not mute_sfx:
 		var sfx = randi_range(0, 1)
@@ -59,18 +62,18 @@ func play_paper_pickup() -> void:
 		else:
 			$Paper2.play()
 
-# Play footsteps with reverb sound effect, with varying pitch scale
+## Play footsteps with reverb sound effect, with varying pitch scale
 func play_footsteps_with_reverb() -> void:
 	if not mute_sfx:
 		$FootstepsReverb.pitch_scale = randf_range(0.7, 1) # This range can be tweaked
 		$FootstepsReverb.play()
 
-# Play the bag open sound effect
+## Play the bag open sound effect
 func play_bag_open() -> void:
 	if not mute_sfx:
 		$BagOpen.play()
 
-# Plays a random bag close sound effect of the 2 options
+## Plays a random bag close sound effect of the 2 options
 func play_bag_close():
 	var sfx = randi_range(0, 1)
 	
@@ -82,12 +85,12 @@ func play_bag_close():
 	if not mute_sfx:
 		$BagClose.play()
 
-# Plays the book pickup sound effect
+## Plays the book pickup sound effect
 func play_book_pickup() -> void:
 	if not mute_sfx:
 		$Book.play()
 
-# Plays a cinematic given its name
+## Plays a cinematic given its name
 func play_cinematic(cinematic_name : String):
 	var music_playing
 	var cinematic_path := "res://assets/cinematics/%s.mp3" % cinematic_name
@@ -100,8 +103,8 @@ func play_cinematic(cinematic_name : String):
 		mute_sfx = true
 		$CinematicPlayer.play()
 
-# Chooses a random int value that is not the last played numpad sound effect number
-# and plays that sound effect
+## Chooses a random int value that is not the last played numpad sound effect number
+## and plays that sound effect
 func play_numpad():
 	var options = [randi_range(1, last_num - 1), randi_range(last_num + 1, 9)]
 	var choice = options.pick_random()
@@ -111,7 +114,7 @@ func play_numpad():
 		$NumPad.play()
 	last_num = choice
 
-# Plays a random misc pickup sound effect of the 2 options
+## Plays a random misc pickup sound effect of the 2 options
 func play_misc_pickup():
 	var sfx = randi_range(0, 1)
 	
@@ -123,7 +126,7 @@ func play_misc_pickup():
 	if not mute_sfx:
 		$MiscPickup.play()
 
-# Restarts music after a cinematic finishes
+## Restarts music after a cinematic finishes
 func _on_cinematic_player_finished():
 	mute_sfx = false
 	await get_tree().create_timer(1.0).timeout

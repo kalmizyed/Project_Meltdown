@@ -6,6 +6,8 @@ signal item_collected(item: Node2D)
 ## The item node to be removed when collected by a player.
 ## Defaults to this CollectableInteractable's parent if not specified.
 @export var item_node: Node2D
+## The type of collectable this CollectableInteractable is (diary or paper)
+@export var item_type: String
 
 func _ready() -> void:
 	item_collected.connect(InventorySystem.on_item_collected)
