@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkp4jj27qe0e4"]
+
+[ext_resource type="PackedScene" uid="uid://kmdpk3r1ei8m" path="res://scenes/entities/enemy/monster.tscn" id="1_lj1jw"]
+[ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_eov0u"]
+
+[sub_resource type="Curve2D" id="Curve2D_v24wn"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 150, 160, 0, 0, 0, 0, 775, 96, 0, 0, 0, 0, 1196, 147, 0, 0, 0, 0, 1402, 371, 0, 0, 0, 0, 1430, 745, 0, 0, 0, 0, 1154, 928, 0, 0, 0, 0, 669, 926, 0, 0, 0, 0, 305, 875, 0, 0, 0, 0, 296, 573, 0, 0, 0, 0, 424, 366)
+}
+point_count = 10
+
+[node name="MonsterTest" type="Node2D"]
+
+[node name="Monster" parent="." instance=ExtResource("1_lj1jw")]
+position = Vector2(356, 182)
+scale = Vector2(0.05, 0.05)
+
+[node name="player" parent="." instance=ExtResource("2_eov0u")]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_v24wn")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(150, 160)
+rotation = -0.102044

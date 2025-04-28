@@ -806,8 +806,6 @@ top_level = true
 light_mask = 4
 visibility_layer = 4
 position = Vector2(12, 357)
-scale = Vector2(0.04, 0.04)
-collision_layer = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="player"]
 visible = false

@@ -1,22 +1,112 @@
-[gd_scene load_steps=4 format=3 uid="uid://kmdpk3r1ei8m"]
+[gd_scene load_steps=14 format=3 uid="uid://kmdpk3r1ei8m"]
 
 [ext_resource type="Script" path="res://scenes/entities/enemy/monster.gd" id="1_7fyur"]
+[ext_resource type="Texture2D" uid="uid://bg5ct8vf7onlv" path="res://assets/sprites/monster/Alien_Sprite_Sheet.png" id="2_twrl8"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tmnne"]
-size = Vector2(300, 300)
+[sub_resource type="AtlasTexture" id="AtlasTexture_m01li"]
+atlas = ExtResource("2_twrl8")
+region = Rect2(263, 0, 263, 555)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pqca"]
-size = Vector2(302, 302)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hx0a"]
+atlas = ExtResource("2_twrl8")
+region = Rect2(263, 555, 263, 555)
 
-[node name="Monster" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioii5"]
+atlas = ExtResource("2_twrl8")
+region = Rect2(0, 0, 263, 555)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4dtl"]
+atlas = ExtResource("2_twrl8")
+region = Rect2(0, 555, 263, 555)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1wmo"]
+atlas = ExtResource("2_twrl8")
+region = Rect2(789, 0, 263, 555)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bquuh"]
+atlas = ExtResource("2_twrl8")
+region = Rect2(789, 555, 263, 555)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2e75"]
+atlas = ExtResource("2_twrl8")
+region = Rect2(526, 0, 263, 555)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf566"]
+atlas = ExtResource("2_twrl8")
+region = Rect2(526, 555, 263, 555)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kxlof"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m01li")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hx0a")
+}],
+"loop": true,
+"name": &"Back Facing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioii5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4dtl")
+}],
+"loop": true,
+"name": &"Front Facing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1wmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bquuh")
+}],
+"loop": true,
+"name": &"Left Facing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2e75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf566")
+}],
+"loop": true,
+"name": &"Right Facing",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mu2sr"]
+radius = 83.0
+height = 308.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wvukp"]
+radius = 532.596
+
+[node name="Monster" type="CharacterBody2D"]
 script = ExtResource("1_7fyur")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_tmnne")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kxlof")
+animation = &"Front Facing"
+frame_progress = 0.284098
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_6pqca")
+shape = SubResource("CapsuleShape2D_mu2sr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wvukp")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 544)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

@@ -618,7 +618,7 @@ states/Walk/position = Vector2(551, 34)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0vg48"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_h3qq1"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_8mgma"), "Walk", "Grab", SubResource("AnimationNodeStateMachineTransition_hfwlm"), "Grab", "Walk", SubResource("AnimationNodeStateMachineTransition_m87k3"), "Grab", "Idle", SubResource("AnimationNodeStateMachineTransition_p5d4n"), "Idle", "Grab", SubResource("AnimationNodeStateMachineTransition_h5j1k"), "Walk", "Push", SubResource("AnimationNodeStateMachineTransition_n52c8"), "Push", "Walk", SubResource("AnimationNodeStateMachineTransition_72747"), "Push", "Idle", SubResource("AnimationNodeStateMachineTransition_02p5h"), "Idle", "Push", SubResource("AnimationNodeStateMachineTransition_wo7pb"), "Hide", "Walk", SubResource("AnimationNodeStateMachineTransition_kpqnw"), "Walk", "Hide", SubResource("AnimationNodeStateMachineTransition_mfpb1"), "Hide", "Idle", SubResource("AnimationNodeStateMachineTransition_k8di5"), "Idle", "Hide", SubResource("AnimationNodeStateMachineTransition_skolm")]
 graph_offset = Vector2(-203, -42.3197)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_j6ksw")
@@ -658,8 +658,8 @@ parameters/Push/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.035, 0.035)
 energy = 2.0
 shadow_enabled = true
-scale = Vector2(0.035, 0.035)
 texture = ExtResource("3_2jc7u")
 texture_scale = 4.0
