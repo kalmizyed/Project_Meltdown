@@ -843,16 +843,17 @@ tile_set = SubResource("TileSet_efy5d")
 position = Vector2(56, -24)
 destination = "kaden-puzzle1"
 
-[node name="player" parent="." instance=ExtResource("2_uto2h")]
-
-[node name="GameUI" parent="player" instance=ExtResource("4_2mcoe")]
-position = Vector2(-601.94, -328)
-
 [node name="Diary" parent="." instance=ExtResource("7_sml48")]
 position = Vector2(26, 7)
 
 [node name="Diary2" parent="." instance=ExtResource("7_sml48")]
 position = Vector2(27, -8)
+
+[node name="player" parent="." instance=ExtResource("2_uto2h")]
+position = Vector2(0, -1)
+
+[node name="GameUI" parent="player" instance=ExtResource("4_2mcoe")]
+position = Vector2(-582, -328)
 
 [node name="Fire!!!!!!" parent="." instance=ExtResource("7_6dkch")]
 position = Vector2(224, -3)

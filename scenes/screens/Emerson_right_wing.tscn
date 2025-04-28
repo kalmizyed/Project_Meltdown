@@ -843,11 +843,16 @@ tile_set = SubResource("TileSet_xhea1")
 [node name="SceneDoor" parent="." instance=ExtResource("3_rlxx7")]
 position = Vector2(56, -24)
 
+[node name="Cassette" parent="." instance=ExtResource("8_ous6g")]
+position = Vector2(128, 0)
+scale = Vector2(0.3, 0.3)
+cinematic_name = "supervisor_kills_robbie"
+
 [node name="player" parent="." instance=ExtResource("4_nqgth")]
-position = Vector2(57, -10)
+position = Vector2(58, -9)
 
 [node name="GameUI" parent="player" instance=ExtResource("5_ek7tm")]
-position = Vector2(-601.94, -328)
+position = Vector2(-582, -328)
 
 [node name="Fire!!!!!!" parent="." instance=ExtResource("6_baham")]
 position = Vector2(-8, -7)
@@ -861,8 +866,3 @@ position = Vector2(153, -8)
 
 [node name="SceneDoor3" parent="." instance=ExtResource("3_rlxx7")]
 position = Vector2(153, 7)
-
-[node name="Cassette" parent="." instance=ExtResource("8_ous6g")]
-position = Vector2(128, 0)
-scale = Vector2(0.3, 0.3)
-cinematic_name = "supervisor_kills_robbie"
