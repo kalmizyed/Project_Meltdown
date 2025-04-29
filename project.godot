@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 AudioController="*res://scenes/misc/audio_controller.tscn"
 InventorySystem="*res://scripts/inventory_system.gd"
+PlayerPositionTracker="*res://scripts/player_position_tracker.gd"
 
 [display]
 
