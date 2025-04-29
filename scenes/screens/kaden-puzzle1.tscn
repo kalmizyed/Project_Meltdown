@@ -408,7 +408,7 @@ position = Vector2(8, 56)
 destination = "Emerson_left_wing"
 
 [node name="player" parent="." instance=ExtResource("5_5urk2")]
-position = Vector2(10, 37)
+position = Vector2(9, 37)
 
 [node name="GameUI" parent="player" instance=ExtResource("5_v6bg1")]
 position = Vector2(-582, -328)

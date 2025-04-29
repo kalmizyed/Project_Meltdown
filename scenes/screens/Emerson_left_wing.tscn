@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dcfv5io1xfwva"]
+[gd_scene load_steps=15 format=4 uid="uid://dcfv5io1xfwva"]
 
 [ext_resource type="Texture2D" uid="uid://ddfijiwnq7laj" path="res://assets/sprites/Tilemap/tileset_small.bmp" id="1_7nmii"]
 [ext_resource type="Script" path="res://scripts/screens/emerson_left_wing.gd" id="1_uo28x"]
@@ -885,11 +885,11 @@ visible = false
 position = Vector2(27, 58)
 
 [node name="Fire!!!!!!" parent="." instance=ExtResource("7_6dkch")]
-position = Vector2(224, 60)
+position = Vector2(119, -1.99999)
 scale = Vector2(0.1, 0.1)
 
 [node name="Door2" parent="." node_paths=PackedStringArray("onSwitches", "offSwitches") instance=ExtResource("8_p48lo")]
-position = Vector2(377, -8)
+position = Vector2(393, -1)
 onSwitches = [NodePath("../leversD2/Lever"), NodePath("../leversD2/Lever2"), NodePath("../leversD2/Lever4"), NodePath("../leversD2/Lever5")]
 offSwitches = [NodePath("../leversD2/Lever3"), NodePath("../leversD2/Lever6"), NodePath("../leversD2/Lever7")]
 
@@ -899,32 +899,25 @@ position = Vector2(280, -25)
 [node name="leversD2" type="Node" parent="."]
 
 [node name="Lever" parent="leversD2" instance=ExtResource("7_sjewx")]
-position = Vector2(196, 9)
+position = Vector2(226, 10)
 
 [node name="Lever2" parent="leversD2" instance=ExtResource("7_sjewx")]
-position = Vector2(221, 9)
+position = Vector2(250, 10)
 
 [node name="Lever3" parent="leversD2" instance=ExtResource("7_sjewx")]
-position = Vector2(245, 9)
+position = Vector2(274, 10)
 
 [node name="Lever4" parent="leversD2" instance=ExtResource("7_sjewx")]
-position = Vector2(268, 10)
+position = Vector2(297, 10)
 
 [node name="Lever5" parent="leversD2" instance=ExtResource("7_sjewx")]
-position = Vector2(291, 9)
+position = Vector2(319, 10)
 
 [node name="Lever6" parent="leversD2" instance=ExtResource("7_sjewx")]
-position = Vector2(313, 9)
+position = Vector2(342, 10)
 
 [node name="Lever7" parent="leversD2" instance=ExtResource("7_sjewx")]
-position = Vector2(336, 8)
-
-[node name="SceneDoor2" parent="." instance=ExtResource("2_ks3wh")]
-position = Vector2(392, -8)
-destination = "Emerson_right_wing"
-
-[node name="SceneDoor3" parent="." instance=ExtResource("2_ks3wh")]
-position = Vector2(377, 7)
+position = Vector2(365, 10)
 
 [node name="player" parent="." instance=ExtResource("2_uto2h")]
 position = Vector2(0, -1)
