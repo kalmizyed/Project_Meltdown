@@ -423,11 +423,11 @@ cinematic_name = "supervisor_turns_down_request"
 position = Vector2(248, -122)
 destination = "nathan-puzzle"
 
+[node name="Trans" parent="." instance=ExtResource("2_f87ck")]
+position = Vector2(-104, 40)
+
+[node name="key2" parent="." instance=ExtResource("2_f87ck")]
+position = Vector2(-152, -135)
+
 [node name="key3" parent="." instance=ExtResource("2_f87ck")]
 position = Vector2(119, -13)
-
-[node name="key2" parent="key3" instance=ExtResource("2_f87ck")]
-position = Vector2(-271, -122)
-
-[node name="Trans" parent="key3/key2" instance=ExtResource("2_f87ck")]
-position = Vector2(48, 175)
