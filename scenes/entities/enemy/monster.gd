@@ -14,15 +14,14 @@ var player = null
 
 @onready var detection_area = $Area2D
 @onready var raycast = $RayCast2D
+@onready var aniTree = $AnimationTree
 @onready var animation = $Sprite2D
 
 func _ready():
 	detection_area.connect("body_entered", Callable(self, "_on_body_entered"))
 	detection_area.connect("body_exited", Callable(self, "_on_body_exited"))
-	animation.play("Front Facing")
 
 func _physics_process(_delta):
-	#update_animation()
 	match state:
 		State.LEAVE:
 			_leave(_delta)
@@ -32,18 +31,22 @@ func _physics_process(_delta):
 			_chase(_delta)
 
 func _leave(_delta):
+	#NOTE ON _leave(_delta): Needs one designated coordinate for the game to run
 	var escape_pos = escape_point
 	var direction = (escape_pos - global_position).normalized()
 	velocity = direction * speed
+	update_animation(velocity)
 	move_and_slide()
 	
 	if global_position.distance_to(escape_pos) < 10:
 		state=State.PATROL
 
 func _patrol(_delta):
+	#NOTE ON MONSTER: The monster can only work if you designate at least one coordinate for the monster to travel to
 	var target_pos = patrol_points[current_patrol_index]
 	var direction = (target_pos - global_position).normalized()
 	velocity = direction * speed
+	update_animation(velocity)
 	move_and_slide()
 
 	if global_position.distance_to(target_pos) < 10:
@@ -53,6 +56,7 @@ func _chase(_delta):
 	if player:
 		var direction = (player.global_position - global_position).normalized()
 		velocity = direction * chase_speed
+		update_animation(velocity)
 		move_and_slide()
 
 func _on_body_entered(body):
@@ -68,5 +72,9 @@ func _on_body_exited(body):
 		print("Lost sight of player. Resuming patrol.")
 		
 		
-#func update_animation():
+func update_animation(velocity):
+	if velocity.x > 0 || velocity.y > 0 || velocity.x < 0 || velocity.y < 0:
+		aniTree["parameters/Movement/blend_position"] = velocity
+		
+		
 		

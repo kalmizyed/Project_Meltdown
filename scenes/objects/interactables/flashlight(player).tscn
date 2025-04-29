@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cl8uui7ywg838"]
+
+[node name="Flashlight(Player)" type="Node2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
