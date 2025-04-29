@@ -85,11 +85,11 @@ func _on_button_3_pressed() -> void:
 
 
 func _on_button_5_pressed() -> void:
-	four.visible = true # Replace with function body.
+	five.visible = true # Replace with function body.
 
 
 func _on_button_4_pressed() -> void:
-	five.visible = true # Replace with function body.
+	four.visible = true # Replace with function body.
 
 
 func _on_button_6_pressed() -> void:
