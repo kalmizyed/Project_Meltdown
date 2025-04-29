@@ -819,14 +819,6 @@ scale = Vector2(0.04, 0.04)
 
 [node name="AlienEnclosure" type="Node2D" parent="."]
 
-[node name="AlienDoor" parent="AlienEnclosure" node_paths=PackedStringArray("switches") instance=ExtResource("3_74yxk")]
-position = Vector2(160, 167)
-switches = [NodePath("../../Lever6")]
-
-[node name="AlienDoor2" parent="AlienEnclosure" node_paths=PackedStringArray("switches") instance=ExtResource("3_74yxk")]
-position = Vector2(45, 166)
-switches = [NodePath("../../Lever6")]
-
 [node name="Monster" parent="AlienEnclosure" instance=ExtResource("16_hb86k")]
 position = Vector2(15, 165)
 scale = Vector2(0.04, 0.04)
@@ -835,15 +827,19 @@ patrol_points = Array[Vector2]([Vector2(191, 145), Vector2(356, 271), Vector2(18
 chase_speed = 70
 detection_radius = 150.0
 
+[node name="Door2" parent="AlienEnclosure" node_paths=PackedStringArray("switches") instance=ExtResource("3_74yxk")]
+position = Vector2(46, 166)
+switches = [NodePath("../../Lever6")]
+
+[node name="Door" parent="AlienEnclosure" node_paths=PackedStringArray("switches") instance=ExtResource("3_74yxk")]
+position = Vector2(162, 167)
+switches = [NodePath("../../Lever6")]
+
 [node name="player" parent="." instance=ExtResource("2_q4o1l")]
 top_level = true
 light_mask = 4
 visibility_layer = 4
 position = Vector2(12, 357)
-
-[node name="Sprite2D2" type="Sprite2D" parent="player"]
-scale = Vector2(10, 10)
-texture = ExtResource("3_gha8n")
 
 [node name="GameUI" parent="player" instance=ExtResource("13_21o1r")]
 position = Vector2(-564, -334)
@@ -894,6 +890,7 @@ scale = Vector2(0.05, 0.05)
 color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
 occluder = SubResource("OccluderPolygon2D_50h4i")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder2D"]
