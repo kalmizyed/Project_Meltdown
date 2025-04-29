@@ -13,10 +13,12 @@ var player = null
 
 @onready var detection_area = $Area2D
 @onready var raycast = $RayCast2D
+@onready var animation = $Sprite2D
 
 func _ready():
 	detection_area.connect("body_entered", Callable(self, "_on_body_entered"))
 	detection_area.connect("body_exited", Callable(self, "_on_body_exited"))
+	animation.play("Front Facing")
 
 func _physics_process(delta):
 	match state:
@@ -25,7 +27,7 @@ func _physics_process(delta):
 		State.CHASE:
 			_chase(delta)
 
-func _patrol(delta):
+func _patrol(_delta):
 	var target_pos = patrol_points[current_patrol_index]
 	var direction = (target_pos - global_position).normalized()
 	velocity = direction * speed
@@ -34,7 +36,7 @@ func _patrol(delta):
 	if global_position.distance_to(target_pos) < 10:
 		current_patrol_index = (current_patrol_index + 1) % patrol_points.size()
 
-func _chase(delta):
+func _chase(_delta):
 	if player:
 		var direction = (player.global_position - global_position).normalized()
 		velocity = direction * chase_speed
