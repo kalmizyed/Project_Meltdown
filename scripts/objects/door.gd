@@ -1,16 +1,23 @@
 extends Node2D
 
-## Tags of any switches that flip the state of this door.
-## If allSwitchesRequired is true, every switch in this list must be on for the door to open.
+## List of objects in the scene with a SwitchInteractable as a child, e.g. levers.
+## If any of those objects is switched, the door will flip states.
 @export var switches: Array[Node]
+
+## List of objects in the scene with a SwitchInteractable as a child, e.g. levers.
+## If there are objects in this list, all of them must be switched on for the door to open.
+## Make sure each required switch node has a unique name for this to work properly.
+@export var onSwitches: Array[Node]
+
+## List of objects in the scene with a SwitchInteractable as a child, e.g. levers.
+## If there are objects in this list, all of them must be switched off for the door to open.
+## Make sure each required switch node has a unique name for this to work properly.
+@export var offSwitches: Array[Node]
+
 var switchStates: Dictionary
 
 ## Can be opened by the player directly.
 @export var canOpen: bool
-
-## If this is enabled, the door will only open if every connected switch is turned on.
-## Make sure each required switch node has a unique name for this to work properly.
-@export var allSwitchesRequired: bool
 
 ## Any items required to be able to open the door by hand, if any.
 @export var items: Array[Node]
@@ -26,8 +33,13 @@ func passes_item_requirements() -> bool:
 	return true
 
 func passes_requirements() -> bool:
-	for enabled in switchStates.values():
-		if not enabled: return false
+	# Check required on/off switches
+	for switch in onSwitches:
+		if switchStates[switch.name] != true:
+			return false
+	for switch in offSwitches:
+		if switchStates[switch.name] != false:
+			return false
 	return true
 
 func _switch_flipped(name, state) -> void:
@@ -38,7 +50,7 @@ func _switch_flipped(name, state) -> void:
 	handle_open()
 
 func handle_open() -> void:
-	if allSwitchesRequired:
+	if onSwitches.size() > 0 or offSwitches.size() > 0:
 		if passes_requirements():
 			open_door()
 		else:
@@ -65,12 +77,16 @@ func close_door() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for switch in switches:
+	var allSwitches: Array[Node] = []
+	allSwitches.append_array(switches)
+	allSwitches.append_array(onSwitches)
+	allSwitches.append_array(offSwitches)
+	for switch in allSwitches:
 		for child in switch.get_children():
 			if child is SwitchInteractable:
 				child.switch_flipped.connect(_switch_flipped)
 				switchStates[switch.name] = child.state
-	if allSwitchesRequired:
+	if onSwitches.size() > 0 or offSwitches.size() > 0:
 		if passes_requirements():
 			open_door()
 		else:
