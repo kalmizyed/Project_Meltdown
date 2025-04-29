@@ -401,3 +401,4 @@ position = Vector2(-582, -328)
 position = Vector2(211, -140)
 rotation = -1.77675
 scale = Vector2(0.3, 0.3)
+cinematic_name = "supervisor_turns_down_request"
