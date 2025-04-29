@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://1kj01bmv1h8j"]
+[gd_scene load_steps=8 format=3 uid="uid://1kj01bmv1h8j"]
 
 [ext_resource type="Texture2D" uid="uid://dxs2ha5jdtdnv" path="res://assets/sprites/objects/Emergency_Light_Sprite.png" id="1_ccbmd"]
 [ext_resource type="Texture2D" uid="uid://csmu8vm50ichc" path="res://assets/sprites/objects/Light_effect.png" id="2_o1tes"]
-[ext_resource type="AudioStream" uid="uid://kxc6novbioy5" path="res://assets/sfx/light_humming.mp3" id="3_0wema"]
+[ext_resource type="AudioStream" uid="uid://kxc6novbioy5" path="res://assets/sfx/light_humming.mp3" id="3_tce4t"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_iayby"]
 polygon = PackedVector2Array(-43, 22, -39, 24, -33, 26, -26, 27, -14, 29, -5, 30, -1, 30, 12, 29, 29, 27, 41, 25, 44, 23, 44, 32, 45, 40, 42, 42, 33, 46, 18, 50, 2, 51, -5, 51, -16, 51, -24, 49, -34, 46, -41, 43, -44, 39, -44, 31)
@@ -58,9 +58,6 @@ position = Vector2(0, -50)
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 1)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-9, 30, -24, 28, -35, 26, -43, 23, -44, 30, -43, 40, -39, 43, -26, 48, -12, 50, 2, 51, 16, 50, 29, 47, 38, 44, 44, 40, 44, 31, 44, 23, 41, 25, 32, 27, 21, 29, 8, 30, 1, 30)
-
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(1, 0, 0, 1)
 energy = 1.77
@@ -78,3 +75,10 @@ occluder = SubResource("OccluderPolygon2D_iayby")
 libraries = {
 "": SubResource("AnimationLibrary_1wseu")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_tce4t")
+autoplay = true
+max_distance = 100.0
+attenuation = 2.0
+parameters/looping = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://c31ydvu27n2gx"]
+[gd_scene load_steps=26 format=4 uid="uid://c31ydvu27n2gx"]
 
 [ext_resource type="Texture2D" uid="uid://6osglomaqj8e" path="res://assets/sprites/placeholder/wall_placeholder.jpg" id="1_7joid"]
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_q4o1l"]
@@ -15,10 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://duot6ct56imwc" path="res://scenes/objects/interactables/placeholder/crate.tscn" id="10_cn3fu"]
 [ext_resource type="Texture2D" uid="uid://5buagskv7i1g" path="res://assets/sprites/objects/Coworker._.png" id="11_356i0"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="13_21o1r"]
-[ext_resource type="PackedScene" path="res://scenes/objects/EmergencyLight.tscn" id="14_nrees"]
+[ext_resource type="PackedScene" uid="uid://1kj01bmv1h8j" path="res://scenes/objects/EmergencyLight.tscn" id="14_nrees"]
 [ext_resource type="PackedScene" uid="uid://d0ol113gmconv" path="res://scenes/objects/interactables/Locker.tscn" id="14_u13do"]
 [ext_resource type="PackedScene" uid="uid://kmdpk3r1ei8m" path="res://scenes/entities/enemy/monster.tscn" id="16_hb86k"]
 [ext_resource type="PackedScene" uid="uid://b2otbalk5awct" path="res://scenes/objects/interactables/office_plant.tscn" id="16_uvkj8"]
+[ext_resource type="PackedScene" uid="uid://cmb3dpj7pwc7k" path="res://scenes/objects/interactables/cassette.tscn" id="20_uwlyw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_prmwe"]
 texture = ExtResource("1_7joid")
@@ -678,6 +679,7 @@ switches = [NodePath("../Lever2")]
 
 [node name="SceneDoor" parent="." instance=ExtResource("4_o7l57")]
 position = Vector2(0, 358)
+destination = "kaden-puzzle1"
 
 [node name="BarrelHazard" parent="." instance=ExtResource("5_1ovoe")]
 position = Vector2(406, 277)
@@ -897,3 +899,12 @@ occluder = SubResource("OccluderPolygon2D_50h4i")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder2D"]
 occluder = SubResource("OccluderPolygon2D_6p7uk")
+
+[node name="SceneDoor2" parent="." instance=ExtResource("4_o7l57")]
+position = Vector2(713, 372)
+destination = "Emerson_right_wing "
+
+[node name="Cassette" parent="." instance=ExtResource("20_uwlyw")]
+position = Vector2(721, 266)
+scale = Vector2(0.3, 0.3)
+cinematic_name = "robbie_cant_find_worker"

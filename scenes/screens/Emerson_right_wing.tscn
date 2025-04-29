@@ -844,12 +844,7 @@ tile_set = SubResource("TileSet_xhea1")
 
 [node name="SceneDoor" parent="." instance=ExtResource("3_rlxx7")]
 position = Vector2(56, -24)
-destination = "kaden-puzzle1"
-
-[node name="Cassette" parent="." instance=ExtResource("8_ous6g")]
-position = Vector2(-42, 0)
-scale = Vector2(0.3, 0.3)
-cinematic_name = "robbie_cant_find_worker"
+destination = "nathan-puzzle"
 
 [node name="player" parent="." instance=ExtResource("4_nqgth")]
 position = Vector2(58, -9)
