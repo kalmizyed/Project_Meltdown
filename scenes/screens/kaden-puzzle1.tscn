@@ -421,3 +421,4 @@ cinematic_name = "supervisor_turns_down_request"
 
 [node name="SceneDoor2" parent="." instance=ExtResource("8_yos32")]
 position = Vector2(248, -122)
+destination = "Emerson_right_wing"
