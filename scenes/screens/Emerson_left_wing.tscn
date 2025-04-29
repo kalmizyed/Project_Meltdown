@@ -857,6 +857,7 @@ visible = false
 position = Vector2(51, 62)
 
 [node name="Trans" parent="lore" instance=ExtResource("7_sml48")]
+visible = false
 position = Vector2(27, -44)
 
 [node name="key1" parent="lore" instance=ExtResource("7_sml48")]
@@ -864,9 +865,11 @@ visible = false
 position = Vector2(24, 52)
 
 [node name="key2" parent="lore" instance=ExtResource("7_sml48")]
+visible = false
 position = Vector2(48, -44)
 
 [node name="key3" parent="lore" instance=ExtResource("7_sml48")]
+visible = false
 position = Vector2(7, -44)
 
 [node name="key4" parent="lore" instance=ExtResource("7_sml48")]
@@ -878,7 +881,7 @@ visible = false
 position = Vector2(-10, -43)
 
 [node name="key6" parent="lore" instance=ExtResource("7_sml48")]
-position = Vector2(70, -43)
+position = Vector2(358, -6)
 
 [node name="key7" parent="lore" instance=ExtResource("7_sml48")]
 visible = false
