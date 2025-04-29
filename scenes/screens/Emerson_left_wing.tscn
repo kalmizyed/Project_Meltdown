@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_uto2h"]
 [ext_resource type="PackedScene" uid="uid://csw5ewrnnjof7" path="res://scenes/ui/game_ui.tscn" id="4_2mcoe"]
 [ext_resource type="PackedScene" uid="uid://dj8unk4b2uswf" path="res://scenes/objects/interactables/fire!!!!!!.tscn" id="7_6dkch"]
+[ext_resource type="PackedScene" uid="uid://d33iws2i65j2b" path="res://scenes/objects/interactables/lever.tscn" id="7_sjewx"]
 [ext_resource type="PackedScene" uid="uid://b01ehmvboywhe" path="res://scenes/objects/interactables/diary.tscn" id="7_sml48"]
 [ext_resource type="PackedScene" uid="uid://ohmcb444fq2p" path="res://scenes/objects/interactables/door.tscn" id="8_p48lo"]
 
@@ -884,17 +885,46 @@ visible = false
 position = Vector2(27, 58)
 
 [node name="Fire!!!!!!" parent="." instance=ExtResource("7_6dkch")]
-position = Vector2(224, -3)
+position = Vector2(224, 60)
 scale = Vector2(0.1, 0.1)
+
+[node name="Door2" parent="." node_paths=PackedStringArray("onSwitches", "offSwitches") instance=ExtResource("8_p48lo")]
+position = Vector2(377, -8)
+onSwitches = [NodePath("../leversD2/Lever"), NodePath("../leversD2/Lever2"), NodePath("../leversD2/Lever4"), NodePath("../leversD2/Lever5")]
+offSwitches = [NodePath("../leversD2/Lever3"), NodePath("../leversD2/Lever6"), NodePath("../leversD2/Lever7")]
 
 [node name="Door" parent="." instance=ExtResource("8_p48lo")]
 position = Vector2(280, -25)
 
+[node name="leversD2" type="Node" parent="."]
+
+[node name="Lever" parent="leversD2" instance=ExtResource("7_sjewx")]
+position = Vector2(196, 9)
+
+[node name="Lever2" parent="leversD2" instance=ExtResource("7_sjewx")]
+position = Vector2(221, 9)
+
+[node name="Lever3" parent="leversD2" instance=ExtResource("7_sjewx")]
+position = Vector2(245, 9)
+
+[node name="Lever4" parent="leversD2" instance=ExtResource("7_sjewx")]
+position = Vector2(268, 10)
+
+[node name="Lever5" parent="leversD2" instance=ExtResource("7_sjewx")]
+position = Vector2(291, 9)
+
+[node name="Lever6" parent="leversD2" instance=ExtResource("7_sjewx")]
+position = Vector2(313, 9)
+
+[node name="Lever7" parent="leversD2" instance=ExtResource("7_sjewx")]
+position = Vector2(336, 8)
+
 [node name="SceneDoor2" parent="." instance=ExtResource("2_ks3wh")]
 position = Vector2(392, -8)
+destination = "Emerson_right_wing"
 
 [node name="SceneDoor3" parent="." instance=ExtResource("2_ks3wh")]
-position = Vector2(392, 7)
+position = Vector2(377, 7)
 
 [node name="player" parent="." instance=ExtResource("2_uto2h")]
 position = Vector2(0, -1)

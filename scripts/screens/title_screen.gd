@@ -31,7 +31,7 @@ func _on_inventory_pressed() -> void:
 
 
 func _on_start_pressed() -> void:
-	## to debug w/o cutscene
-	## load_level("Emerson_left_wing")
+	# to debug w/o cutscene
+	# load_level("Emerson_left_wing")
 	load_level("transition_cinematic") # Replace with function body.
 	AudioController.stop_main_menu()
