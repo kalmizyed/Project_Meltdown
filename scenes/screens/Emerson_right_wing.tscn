@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c3nhuqmeqp4t3"]
+[gd_scene load_steps=15 format=4 uid="uid://c3nhuqmeqp4t3"]
 
 [ext_resource type="Texture2D" uid="uid://ddfijiwnq7laj" path="res://assets/sprites/Tilemap/tileset_small.bmp" id="1_t73od"]
 [ext_resource type="Texture2D" uid="uid://dgb0xqhqvs3ic" path="res://assets/sprites/Tilemap/tileset_small_wall.bmp" id="2_dlxs4"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ohmcb444fq2p" path="res://scenes/objects/interactables/door.tscn" id="7_83vuj"]
 [ext_resource type="PackedScene" uid="uid://cmb3dpj7pwc7k" path="res://scenes/objects/interactables/cassette.tscn" id="8_ous6g"]
 [ext_resource type="PackedScene" uid="uid://d33iws2i65j2b" path="res://scenes/objects/interactables/lever.tscn" id="9_6xxr5"]
+[ext_resource type="PackedScene" uid="uid://b01ehmvboywhe" path="res://scenes/objects/interactables/diary.tscn" id="10_vy5qm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ffg4j"]
 texture = ExtResource("1_t73od")
@@ -895,3 +896,6 @@ position = Vector2(-184, -24)
 position = Vector2(172, 2)
 scale = Vector2(0.3, 0.3)
 cinematic_name = "supervisor_murders_robbie_full"
+
+[node name="key6" parent="." instance=ExtResource("10_vy5qm")]
+position = Vector2(88, -6)

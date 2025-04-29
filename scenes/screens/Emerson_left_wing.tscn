@@ -881,6 +881,7 @@ visible = false
 position = Vector2(-10, -43)
 
 [node name="key6" parent="lore" instance=ExtResource("7_sml48")]
+visible = false
 position = Vector2(358, -6)
 
 [node name="key7" parent="lore" instance=ExtResource("7_sml48")]
