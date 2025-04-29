@@ -103,3 +103,4 @@ func _on_interactable_interacted() -> void:
 		handle_open()
 	else:
 		$DoorLocked.play()
+		print($".")

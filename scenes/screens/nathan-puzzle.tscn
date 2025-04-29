@@ -842,7 +842,6 @@ visibility_layer = 4
 position = Vector2(12, 357)
 
 [node name="Sprite2D2" type="Sprite2D" parent="player"]
-visible = false
 scale = Vector2(10, 10)
 texture = ExtResource("3_gha8n")
 
@@ -902,7 +901,7 @@ occluder = SubResource("OccluderPolygon2D_6p7uk")
 
 [node name="SceneDoor2" parent="." instance=ExtResource("4_o7l57")]
 position = Vector2(713, 372)
-destination = "Emerson_right_wing "
+destination = "Emerson_right_wing"
 
 [node name="Cassette" parent="." instance=ExtResource("20_uwlyw")]
 position = Vector2(721, 266)
