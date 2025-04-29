@@ -112,6 +112,7 @@ size = Vector2(5, 14)
 
 [sub_resource type="Animation" id="Animation_iq874"]
 resource_name = "Grab_back"
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -119,7 +120,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [5, 5]
@@ -127,6 +128,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_5ybh3"]
 resource_name = "Grab_front"
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -142,6 +144,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_cdapt"]
 resource_name = "Grab_left"
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -157,6 +160,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_xy0hs"]
 resource_name = "Grab_right"
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -338,6 +342,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_l48ts"]
 resource_name = "push_Back"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -353,6 +358,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_w058v"]
 resource_name = "push_Front"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -368,6 +374,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_bi026"]
 resource_name = "push_Left"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -383,6 +390,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_hqowp"]
 resource_name = "push_Right"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -618,7 +626,7 @@ states/Walk/position = Vector2(551, 34)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0vg48"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_h3qq1"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_8mgma"), "Walk", "Grab", SubResource("AnimationNodeStateMachineTransition_hfwlm"), "Grab", "Walk", SubResource("AnimationNodeStateMachineTransition_m87k3"), "Grab", "Idle", SubResource("AnimationNodeStateMachineTransition_p5d4n"), "Idle", "Grab", SubResource("AnimationNodeStateMachineTransition_h5j1k"), "Walk", "Push", SubResource("AnimationNodeStateMachineTransition_n52c8"), "Push", "Walk", SubResource("AnimationNodeStateMachineTransition_72747"), "Push", "Idle", SubResource("AnimationNodeStateMachineTransition_02p5h"), "Idle", "Push", SubResource("AnimationNodeStateMachineTransition_wo7pb"), "Hide", "Walk", SubResource("AnimationNodeStateMachineTransition_kpqnw"), "Walk", "Hide", SubResource("AnimationNodeStateMachineTransition_mfpb1"), "Hide", "Idle", SubResource("AnimationNodeStateMachineTransition_k8di5"), "Idle", "Hide", SubResource("AnimationNodeStateMachineTransition_skolm")]
 graph_offset = Vector2(-203, -42.3197)
 
-[node name="player" type="CharacterBody2D" groups=["player"]]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_j6ksw")

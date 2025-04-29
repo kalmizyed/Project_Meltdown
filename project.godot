@@ -14,7 +14,7 @@ config/name="Codename_Meltdown"
 run/main_scene="res://scenes/screens/title_screen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
-boot_splash/defaults/default_clear_color=Color(0.323584, 0.323584, 0.323584, 1)
+boot_splash/defaults/default_clear_color=Color(0, 0, 0, 1)
 
 [autoload]
 

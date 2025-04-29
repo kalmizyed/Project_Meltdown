@@ -90,12 +90,15 @@ height = 308.0
 radius = 532.596
 
 [node name="Monster" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_7fyur")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kxlof")
-animation = &"Front Facing"
-frame_progress = 0.284098
+animation = &"Right Facing"
+frame_progress = 0.526839
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

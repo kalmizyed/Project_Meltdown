@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://btnm2oe5kt8sp" path="res://scenes/objects/interactables/paper.tscn" id="7_r4tqv"]
 [ext_resource type="PackedScene" uid="uid://b01ehmvboywhe" path="res://scenes/objects/interactables/diary.tscn" id="8_vam8a"]
 [ext_resource type="PackedScene" uid="uid://drryqkn41xb1a" path="res://scenes/objects/interactables/Cabinet.tscn" id="9_c37ti"]
-[ext_resource type="PackedScene" uid="uid://bddu3er53eaa8" path="res://scenes/objects/interactables/table.tscn" id="9_u61jh"]
+[ext_resource type="Texture2D" uid="uid://bhlrfpmj7gimy" path="res://assets/sprites/objects/Table.png" id="9_d8lqm"]
 [ext_resource type="PackedScene" uid="uid://dj8unk4b2uswf" path="res://scenes/objects/interactables/fire!!!!!!.tscn" id="10_0uvej"]
 [ext_resource type="PackedScene" uid="uid://duot6ct56imwc" path="res://scenes/objects/interactables/placeholder/crate.tscn" id="10_cn3fu"]
 [ext_resource type="Texture2D" uid="uid://5buagskv7i1g" path="res://assets/sprites/objects/Coworker._.png" id="11_356i0"]
@@ -714,9 +714,10 @@ text = "Red lights hold the key"
 position = Vector2(179, 28)
 scale = Vector2(0.03, 0.03)
 
-[node name="Table2" parent="." instance=ExtResource("9_u61jh")]
+[node name="Table" type="Sprite2D" parent="."]
 position = Vector2(157, 47)
 scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_d8lqm")
 
 [node name="PaperPickup1" parent="." instance=ExtResource("7_r4tqv")]
 position = Vector2(158, 46)
@@ -805,15 +806,11 @@ position = Vector2(108, 23)
 scale = Vector2(0.05, 0.05)
 
 [node name="Locker2" parent="." instance=ExtResource("14_u13do")]
-position = Vector2(172, 208)
+position = Vector2(172, 257)
 scale = Vector2(0.05, 0.05)
 
-[node name="Locker3" parent="." instance=ExtResource("14_u13do")]
-position = Vector2(428, 152)
-scale = Vector2(0.05, 0.05)
-
-[node name="CoordinateRef" type="Marker2D" parent="."]
-position = Vector2(187, 129)
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(259, 131)
 scale = Vector2(0.04, 0.04)
 
 [node name="AlienEnclosure" type="Node2D" parent="."]
@@ -825,8 +822,10 @@ switches = [NodePath("../../Lever6")]
 [node name="Monster" parent="AlienEnclosure" instance=ExtResource("16_hb86k")]
 position = Vector2(15, 165)
 scale = Vector2(0.04, 0.04)
-escape_point = Vector2(186, 167)
-patrol_points = Array[Vector2]([Vector2(191, 145), Vector2(356, 271), Vector2(183, 167), Vector2(182, 50), Vector2(187, 129), Vector2(362, 140), Vector2(259, 131), Vector2(181, 279)])
+patrol_points = Array[Vector2]([Vector2(362, 140), Vector2(183, 167), Vector2(356, 271), Vector2(191, 1450), Vector2(259, 131)])
+speed = 100
+chase_speed = 130
+detection_radius = 100.0
 
 [node name="player" parent="." instance=ExtResource("2_q4o1l")]
 top_level = true
@@ -888,6 +887,7 @@ scale = Vector2(0.05, 0.05)
 color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
 occluder = SubResource("OccluderPolygon2D_50h4i")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder2D"]

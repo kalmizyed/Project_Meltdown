@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
-enum State { PATROL, CHASE }
-var state = State.PATROL
+enum State { LEAVE, PATROL, CHASE }
+var state = State.LEAVE
 
+@export var escape_point: Vector2
 @export var patrol_points: Array[Vector2]
-@export var speed = 100
-@export var chase_speed = 130
+@export var speed = 50
+@export var chase_speed = 100
 @export var detection_radius = 100.0
 
 var current_patrol_index = 0
@@ -20,12 +21,24 @@ func _ready():
 	detection_area.connect("body_exited", Callable(self, "_on_body_exited"))
 	animation.play("Front Facing")
 
-func _physics_process(delta):
+func _physics_process(_delta):
+	#update_animation()
 	match state:
+		State.LEAVE:
+			_leave(_delta)
 		State.PATROL:
-			_patrol(delta)
+			_patrol(_delta)
 		State.CHASE:
-			_chase(delta)
+			_chase(_delta)
+
+func _leave(_delta):
+	var escape_pos = escape_point
+	var direction = (escape_pos - global_position).normalized()
+	velocity = direction * speed
+	move_and_slide()
+	
+	if global_position.distance_to(escape_pos) < 10:
+		state=State.PATROL
 
 func _patrol(_delta):
 	var target_pos = patrol_points[current_patrol_index]
@@ -53,3 +66,7 @@ func _on_body_exited(body):
 		player = null
 		state = State.PATROL
 		print("Lost sight of player. Resuming patrol.")
+		
+		
+#func update_animation():
+		
