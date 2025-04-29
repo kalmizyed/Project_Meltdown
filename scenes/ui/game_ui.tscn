@@ -27,10 +27,10 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(575, 327)
 
 [node name="X" type="Button" parent="."]
-offset_left = 392.0
-offset_top = 265.0
-offset_right = 410.0
-offset_bottom = 296.0
+offset_left = 434.0
+offset_top = 231.0
+offset_right = 452.0
+offset_bottom = 262.0
 text = "X"
 metadata/_edit_use_anchors_ = true
 
