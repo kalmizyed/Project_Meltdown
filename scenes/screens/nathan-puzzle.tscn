@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=4 uid="uid://c31ydvu27n2gx"]
+[gd_scene load_steps=30 format=4 uid="uid://c31ydvu27n2gx"]
 
 [ext_resource type="Texture2D" uid="uid://6osglomaqj8e" path="res://assets/sprites/placeholder/wall_placeholder.jpg" id="1_7joid"]
+[ext_resource type="Texture2D" uid="uid://ddfijiwnq7laj" path="res://assets/sprites/Tilemap/tileset_small.bmp" id="2_dj4nk"]
 [ext_resource type="PackedScene" uid="uid://753bhb7gqe68" path="res://scenes/entities/player/player.tscn" id="2_q4o1l"]
 [ext_resource type="PackedScene" uid="uid://ohmcb444fq2p" path="res://scenes/objects/interactables/door.tscn" id="3_74yxk"]
 [ext_resource type="Texture2D" uid="uid://w1cqhfquw6rr" path="res://assets/sprites/placeholder/grey_sprite.png" id="3_gha8n"]
@@ -18,13 +19,165 @@
 [ext_resource type="PackedScene" uid="uid://1kj01bmv1h8j" path="res://scenes/objects/EmergencyLight.tscn" id="14_nrees"]
 [ext_resource type="PackedScene" uid="uid://d0ol113gmconv" path="res://scenes/objects/interactables/Locker.tscn" id="14_u13do"]
 [ext_resource type="PackedScene" uid="uid://kmdpk3r1ei8m" path="res://scenes/entities/enemy/monster.tscn" id="16_hb86k"]
+[ext_resource type="Texture2D" uid="uid://bpodbbu1tydq0" path="res://assets/sprites/objects/Boolets_Inventory_Sprite.png" id="16_i73w0"]
 [ext_resource type="PackedScene" uid="uid://b2otbalk5awct" path="res://scenes/objects/interactables/office_plant.tscn" id="16_uvkj8"]
+[ext_resource type="Texture2D" uid="uid://b6a8thqmhqon5" path="res://assets/sprites/objects/IJ-70_Inventory_Sprite.png" id="17_42xfa"]
 [ext_resource type="PackedScene" uid="uid://cmb3dpj7pwc7k" path="res://scenes/objects/interactables/cassette.tscn" id="20_uwlyw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_prmwe"]
 texture = ExtResource("1_7joid")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q2ey3"]
+texture = ExtResource("2_dj4nk")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dq6nt"]
 texture = ExtResource("3_gha8n")
@@ -659,9 +812,10 @@ texture = ExtResource("3_gha8n")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_prmwe")
 sources/2 = SubResource("TileSetAtlasSource_dq6nt")
+sources/1 = SubResource("TileSetAtlasSource_q2ey3")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_50h4i"]
-polygon = PackedVector2Array(168, 350, 168, 303, 248, 303, 248, 287, 168, 287, 168, 95, 104, 95, 104, 15, 216, 15, 216, 95, 200, 95, 200, 111, 296, 111, 296, -33, 280, -33, 280, -81, 309, -81, 328, -81, 328, -33, 344, -33, 344, -97, 309, -97, 280, -97, 264, -97, 264, -33, 264, -15, 280, -5, 280, 95, 232, 95, 232, -1, 88, -1, 88, 111, 152, 111, 152, 335, -24, 335, -24, 383, 488, 383, 488, 367, 632, 367, 632, 239, 696, 239, 696, 319, 664, 319, 664, 398, 776, 398, 776, 318, 743, 318, 743, 191, 632, 191, 632, 63, 568, 63, 568, 15, 392, 15, 392, 95, 328, 95, 328, -33, 312, -33, 313, 111, 377, 111, 377, 127, 392, 127, 392, 111, 408, 111, 408, 31, 432.21, 31, 552, 31, 552, 79, 616, 79, 616, 207, 728, 207, 728, 335, 760, 335, 760, 383, 680, 383, 680, 335, 712, 335, 712, 223, 616, 223, 616, 351, 472, 351, 472, 367, 328, 367, 328, 303, 392, 303, 392, 239, 376, 239, 376, 287, 312, 287, 312, 367, -8, 367, -8, 351)
+polygon = PackedVector2Array(168, 350, 168, 303, 248, 303, 248, 287, 168, 287, 168, 95, 104, 95, 104, 15, 188.513, 15, 216, 15, 216, 95, 200, 95, 200, 111, 296, 111, 296, -33, 280, -33, 280, -81, 309, -81, 328, -81, 328, -33, 344, -33, 344, -97, 309, -97, 280, -97, 264, -97, 264, -33, 264, -15, 280, -5, 280, 95, 232, 95, 232, -1, 88, -1, 88, 111, 152, 111, 152, 335, -24, 335, -24, 383, 488, 383, 488, 367, 632, 367, 632, 239, 696, 239, 696, 319, 664, 319, 664, 398, 776, 398, 776, 318, 743, 318, 743, 191, 632, 191, 632, 63, 568, 63, 568, 15, 392, 15, 392, 95, 328, 95, 328, -33, 312, -33, 313, 111, 377, 111, 377, 127, 392, 127, 392, 111, 408, 111, 408, 31, 432.21, 31, 552, 31, 552, 79, 616, 79, 616, 207, 728, 207, 728, 335, 760, 335, 760, 383, 680, 383, 680, 335, 712, 335, 712, 223, 616, 223, 616, 351, 472, 351, 472, 367, 328, 367, 328, 303, 392, 303, 392, 239, 376, 239, 376, 287, 312, 287, 312, 367, -8, 367, -8, 351)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6p7uk"]
 polygon = PackedVector2Array(376, 143, 392, 143, 392, 159, 552, 159, 552, 95, 600, 95, 600, 335, 472, 335, 472, 175, 392, 175, 392, 223, 376, 223)
@@ -712,10 +866,6 @@ position = Vector2(451, 188)
 position = Vector2(179, 71)
 text = "Red lights hold the key"
 
-[node name="Office_Plant" parent="." instance=ExtResource("16_uvkj8")]
-position = Vector2(179, 28)
-scale = Vector2(0.03, 0.03)
-
 [node name="Table2" parent="." instance=ExtResource("9_u61jh")]
 position = Vector2(157, 47)
 scale = Vector2(0.07, 0.07)
@@ -727,6 +877,18 @@ scale = Vector2(0.4, 0.4)
 [node name="cabinet" parent="." instance=ExtResource("9_c37ti")]
 position = Vector2(188, 23)
 scale = Vector2(0.05, 0.05)
+
+[node name="cabinet3" parent="." instance=ExtResource("9_c37ti")]
+position = Vector2(172, 23)
+scale = Vector2(0.05, 0.05)
+
+[node name="cabinet4" parent="." instance=ExtResource("9_c37ti")]
+position = Vector2(207, 23)
+scale = Vector2(0.05, 0.05)
+
+[node name="Office_Plant" parent="." instance=ExtResource("16_uvkj8")]
+position = Vector2(181, 28)
+scale = Vector2(0.03, 0.03)
 
 [node name="cabinet1" parent="." instance=ExtResource("9_c37ti")]
 position = Vector2(286, 357)
@@ -776,6 +938,24 @@ position = Vector2(-7.14425, -9.84674)
 rotation = -2.03331
 scale = Vector2(0.05, 0.05)
 
+[node name="SmallOffice" type="Node" parent="."]
+
+[node name="cabinet3" parent="SmallOffice" instance=ExtResource("9_c37ti")]
+position = Vector2(332, 312)
+scale = Vector2(0.05, 0.05)
+
+[node name="cabinet4" parent="SmallOffice" instance=ExtResource("9_c37ti")]
+position = Vector2(341, 312)
+scale = Vector2(0.05, 0.05)
+
+[node name="cabinet5" parent="SmallOffice" instance=ExtResource("9_c37ti")]
+position = Vector2(350, 312)
+scale = Vector2(0.05, 0.05)
+
+[node name="cabinet6" parent="SmallOffice" instance=ExtResource("9_c37ti")]
+position = Vector2(359, 312)
+scale = Vector2(0.05, 0.05)
+
 [node name="Coworker_" type="Sprite2D" parent="."]
 position = Vector2(733, 364)
 scale = Vector2(0.04, 0.04)
@@ -798,6 +978,26 @@ switches = [NodePath("../Lever8")]
 [node name="Crate" parent="." instance=ExtResource("10_cn3fu")]
 position = Vector2(198, 25)
 
+[node name="CrateStack" type="Node" parent="."]
+
+[node name="Crate2" parent="CrateStack" instance=ExtResource("10_cn3fu")]
+position = Vector2(174, 308)
+
+[node name="Crate3" parent="CrateStack" instance=ExtResource("10_cn3fu")]
+position = Vector2(185, 308)
+
+[node name="Crate4" parent="CrateStack" instance=ExtResource("10_cn3fu")]
+position = Vector2(195, 308)
+
+[node name="Crate5" parent="CrateStack" instance=ExtResource("10_cn3fu")]
+position = Vector2(185, 315)
+
+[node name="Crate6" parent="CrateStack" instance=ExtResource("10_cn3fu")]
+position = Vector2(185, 322)
+
+[node name="Crate7" parent="CrateStack" instance=ExtResource("10_cn3fu")]
+position = Vector2(209, 342)
+
 [node name="BarrelHazard2" parent="." instance=ExtResource("5_1ovoe")]
 position = Vector2(447, 39)
 
@@ -816,6 +1016,25 @@ scale = Vector2(0.05, 0.05)
 [node name="CoordinateRef" type="Marker2D" parent="."]
 position = Vector2(187, 129)
 scale = Vector2(0.04, 0.04)
+
+[node name="Deco" type="Node2D" parent="."]
+position = Vector2(188, 15)
+rotation = 2.7838
+scale = Vector2(0.00636694, 0.00544959)
+
+[node name="BooletsInventorySprite" type="Sprite2D" parent="Deco"]
+position = Vector2(409.682, 111.614)
+rotation = -2.72975
+scale = Vector2(0.860027, 1.22726)
+skew = -0.102124
+texture = ExtResource("16_i73w0")
+region_enabled = true
+region_rect = Rect2(341.535, 546.108, 245.227, 193.352)
+
+[node name="Ij-70InventorySprite" type="Sprite2D" parent="Deco"]
+texture = ExtResource("17_42xfa")
+region_enabled = true
+region_rect = Rect2(86.8763, 246.648, 481.021, 367.84)
 
 [node name="AlienEnclosure" type="Node2D" parent="."]
 
