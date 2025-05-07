@@ -12,10 +12,11 @@ var state = State.LEAVE
 var current_patrol_index = 0
 var player = null
 
-@onready var detection_area = $Area2D
+@onready var detection_area = $DetectionArea
 @onready var raycast = $RayCast2D
 @onready var aniTree = $AnimationTree
 @onready var animation = $Sprite2D
+@onready var timer = $Timer
 
 func _ready():
 	detection_area.connect("body_entered", Callable(self, "_on_body_entered"))
@@ -58,14 +59,14 @@ func _chase(_delta):
 		velocity = direction * chase_speed
 		update_animation(velocity)
 		move_and_slide()
-
-func _on_body_entered(body):
+		
+func _on_detection_area_body_entered(body):
 	if body.is_in_group("Player"):
 		player = body
 		state = State.CHASE
 		print("Player detected! Chasing...")
-
-func _on_body_exited(body):
+		
+func _on_detection_area_body_exited(body):
 	if body == player:
 		player = null
 		state = State.PATROL

@@ -4,82 +4,82 @@
 [ext_resource type="Texture2D" uid="uid://7ipbh7r35l5r" path="res://assets/sprites/monster/Alien_Sprite_Sheet.png" id="2_twrl8"]
 [ext_resource type="AudioStream" uid="uid://q5xceghrdol0" path="res://assets/sfx/alien_ambiance.mp3" id="3_5hv8i"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m01li"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaayg"]
 atlas = ExtResource("2_twrl8")
 region = Rect2(263, 0, 263, 555)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7hx0a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sc486"]
 atlas = ExtResource("2_twrl8")
 region = Rect2(263, 555, 263, 555)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ioii5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdpnx"]
 atlas = ExtResource("2_twrl8")
 region = Rect2(0, 0, 263, 555)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p4dtl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_brkay"]
 atlas = ExtResource("2_twrl8")
 region = Rect2(0, 555, 263, 555)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j1wmo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_378a3"]
 atlas = ExtResource("2_twrl8")
 region = Rect2(789, 0, 263, 555)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bquuh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmtch"]
 atlas = ExtResource("2_twrl8")
 region = Rect2(789, 555, 263, 555)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r2e75"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pulem"]
 atlas = ExtResource("2_twrl8")
 region = Rect2(526, 0, 263, 555)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rf566"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhx08"]
 atlas = ExtResource("2_twrl8")
 region = Rect2(526, 555, 263, 555)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_kxlof"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ad5cj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m01li")
+"texture": SubResource("AtlasTexture_qaayg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7hx0a")
+"texture": SubResource("AtlasTexture_sc486")
 }],
 "loop": true,
-"name": &"Back Facing",
+"name": &"BackFacing",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ioii5")
+"texture": SubResource("AtlasTexture_tdpnx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p4dtl")
+"texture": SubResource("AtlasTexture_brkay")
 }],
 "loop": true,
-"name": &"Front Facing",
+"name": &"FrontFacing",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j1wmo")
+"texture": SubResource("AtlasTexture_378a3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bquuh")
+"texture": SubResource("AtlasTexture_lmtch")
 }],
 "loop": true,
-"name": &"Left Facing",
+"name": &"LeftFacing",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r2e75")
+"texture": SubResource("AtlasTexture_pulem")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rf566")
+"texture": SubResource("AtlasTexture_rhx08")
 }],
 "loop": true,
-"name": &"Right Facing",
+"name": &"RightFacing",
 "speed": 5.0
 }]
 
@@ -88,222 +88,243 @@ radius = 83.0
 height = 308.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wvukp"]
-radius = 962.79
-
-[sub_resource type="Animation" id="Animation_0mjwa"]
-resource_name = "Back"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.566667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"Back Facing", &"Back Facing"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_sn6d1"]
-resource_name = "Front"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.03333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"Front Facing", &"Front Facing"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_ghlr6"]
-resource_name = "Left"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"Left Facing", &"Left Facing"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_6er2e"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Front Facing"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_auh1w"]
-resource_name = "Right"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"Right Facing", &"Right Facing"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fcscq"]
-_data = {
-"Back": SubResource("Animation_0mjwa"),
-"Front": SubResource("Animation_sn6d1"),
-"Left": SubResource("Animation_ghlr6"),
-"RESET": SubResource("Animation_6er2e"),
-"Right": SubResource("Animation_auh1w")
-}
+radius = 1143.02
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ligv5"]
-animation = &"Front"
+animation = &"FrontFacing"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yg461"]
-animation = &"Back"
+animation = &"BackFacing"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r7l8x"]
-animation = &"Left"
+animation = &"LeftFacing"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tggy7"]
-animation = &"Right"
+animation = &"RightFacing"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_f4c03"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_ligv5")
-blend_point_0/pos = Vector2(0, 1)
+blend_point_0/pos = Vector2(0, 1.1)
 blend_point_1/node = SubResource("AnimationNodeAnimation_yg461")
-blend_point_1/pos = Vector2(0, -1)
+blend_point_1/pos = Vector2(0, -1.1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_r7l8x")
 blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_tggy7")
 blend_point_3/pos = Vector2(1, 0)
+min_space = Vector2(-1, -1.1)
+max_space = Vector2(1, 1.1)
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k2rg5"]
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_6byxn"]
 states/Movement/node = SubResource("AnimationNodeBlendSpace2D_f4c03")
-states/Movement/position = Vector2(423, 102)
+states/Movement/position = Vector2(423, 100)
 transitions = ["Start", "Movement", SubResource("AnimationNodeStateMachineTransition_k2rg5")]
 
-[node name="Monster" type="CharacterBody2D"]
+[sub_resource type="Animation" id="Animation_4nfkh"]
+resource_name = "FrontFacing"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RayCast2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_72god"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RayCast2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4pvse"]
+resource_name = "BackFacing"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RayCast2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_jeb0h"]
+resource_name = "LeftFacing"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [3, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RayCast2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_vsu0b"]
+resource_name = "RightFacing"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RayCast2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ny4v5"]
+_data = {
+"BackFacing": SubResource("Animation_4pvse"),
+"FrontFacing": SubResource("Animation_4nfkh"),
+"LeftFacing": SubResource("Animation_jeb0h"),
+"RESET": SubResource("Animation_72god"),
+"RightFacing": SubResource("Animation_vsu0b")
+}
+
+[node name="Monster" type="CharacterBody2D" groups=["Alien"]]
 y_sort_enabled = true
+collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_7fyur")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_kxlof")
-animation = &"Front Facing"
-frame = 1
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_twrl8")
+hframes = 4
+vframes = 2
+region_enabled = true
+region_rect = Rect2(-9.68567, 2.08512, 1065.79, 1114.61)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_ad5cj")
+animation = &"FrontFacing"
+
+[node name="MonsterArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MonsterArea"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_mu2sr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_mu2sr")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_wvukp")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(966, 3)
+target_position = Vector2(965, 1)
+collision_mask = 3
+hit_from_inside = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_fcscq")
-}
 tree_root = SubResource("AnimationNodeStateMachine_6byxn")
+anim_player = NodePath("../AnimationPlayer")
 parameters/Movement/blend_position = Vector2(0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ny4v5")
+}
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_5hv8i")
@@ -311,3 +332,8 @@ volume_db = 10.0
 autoplay = true
 max_distance = 500.0
 parameters/looping = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
